@@ -42,7 +42,7 @@ async function activate(
       const condaStoreExtension = new CondaStoreWidget();
       condaStoreExtension.id = id;
       condaStoreExtension.title.icon = condaStoreIcon;
-      condaStoreExtension.title.caption = 'Conda Store';
+      condaStoreExtension.title.caption = 'conda-store extension';
 
       // Let the application restorer track the running panel for restoration of
       // application state (e.g. setting the running panel as the current side bar
