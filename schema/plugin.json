@@ -1,0 +1,21 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "jupyterlab-conda-store",
+  "description": "jupyterlab-conda-store settings.",
+  "type": "object",
+  "properties": {
+    "condaStoreUrl": {
+      "type": "string",
+      "title": "conda-store server url",
+      "description": "the url for your conda-store server. The server needs to already be running for the jupyterlab extension to work",
+      "default": "http://localhost"
+    },
+    "condaStorePort": {
+      "type": "integer",
+      "title": "conda-store server port",
+      "description": "the url for your conda-store server. The server needs to already be running for the jupyterlab extension to work",
+      "default": 5000
+    }
+  },
+  "additionalProperties": false
+}

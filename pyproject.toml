@@ -1,0 +1,90 @@
+[build-system]
+requires = ["hatchling>=1.3.1", "jupyterlab~=3.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jupyterlab_conda_store"
+version = "0.1.0"
+description = "A jupyterlab extension that provides a beautiful, user-friendly graphical interface for building and managing environments using ayour existing conda-store server"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+authors = [
+    { name = "telamonian", email = "me@test.com" },
+]
+keywords = ["Jupyter", "JupyterLab", "JupyterLab3"]
+classifiers = [
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Framework :: Jupyter :: JupyterLab :: 3",
+    "Framework :: Jupyter :: JupyterLab :: Extensions",
+    "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+]
+
+[project.optional-dependencies]
+test = [
+    "coverage",
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "pytest-tornasync"
+]
+
+[project.urls]
+Homepage = "https://github.com/gitelamonian/jupyterlab-conda-store"
+
+[tool.hatch.build]
+artifacts = ["jupyterlab_conda_store/labextension"]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"jupyterlab_conda_store/labextension" = "share/jupyter/labextensions/jupyterlab_conda_store"
+"install.json" = "share/jupyter/labextensions/jupyterlab_conda_store/install.json"
+
+[tool.hatch.build.targets.sdist]
+exclude = [".github"]
+
+[tool.hatch.build.hooks.jupyter-builder]
+dependencies = ["hatch-jupyter-builder>=0.5"]
+build-function = "hatch_jupyter_builder.npm_builder"
+ensured-targets = [
+    "jupyterlab_conda_store/labextension/static/style.js",
+    "jupyterlab_conda_store//labextension/package.json",
+]
+skip-if-exists = ["jupyterlab_conda_store/labextension/static/style.js"]
+
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
+build_cmd = "build:prod"
+npm = ["jlpm"]
+
+[tool.hatch.build.hooks.jupyter-builder.editable-build-kwargs]
+build_cmd = "install:extension"
+source_dir = "src"
+build_dir = "jupyterlab_conda_store/labextension"
+
+[tool.tbump]
+field = [
+    { name = "channel", default = "" },
+    { name = "release", default = "" },
+]
+file = [
+    { src = "pyproject.toml", version_template = "version = \"{major}.{minor}.{patch}{channel}{release}\"" },
+    { src = "jupyterlab_conda_store/_version.py" },
+    { src = "package.json" },
+]
+
+[tool.tbump.version]
+current = "0.1.0"
+regex = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)((?P<channel>a|b|rc|.dev)(?P<release>\\d+))?"
+
+[tool.tbump.git]
+message_template = "Bump to {new_version}"
+tag_template = "v{new_version}"
