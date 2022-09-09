@@ -5,7 +5,7 @@ import {
 } from '@jupyterlab/application';
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
 
-import { condaStoreIcon } from './style/icons';
+import { condaStoreNotextIcon } from './style/icons';
 import { CondaStoreWidget } from './widget/condaStoreWidget';
 
 /**
@@ -41,7 +41,7 @@ async function activate(
       const id = 'jp-conda-store-sidebar';
       const condaStoreExtension = new CondaStoreWidget();
       condaStoreExtension.id = id;
-      condaStoreExtension.title.icon = condaStoreIcon;
+      condaStoreExtension.title.icon = condaStoreNotextIcon;
       condaStoreExtension.title.caption = 'conda-store extension';
 
       // Let the application restorer track the running panel for restoration of
