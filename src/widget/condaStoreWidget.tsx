@@ -1,12 +1,15 @@
+import { ReactWidget } from '@jupyterlab/apputils';
 import * as React from 'react';
 
-import { ReactWidget } from '@jupyterlab/apputils';
+import {AppExample} from "@conda-store/conda-store-ui"
 
 export class CondaStoreWidget extends ReactWidget {
 
-    render(): JSX.Element {
-      return (
-        <div></div>
-      );
-    }
+  render(): JSX.Element {
+    return (
+      <AppExample/>
+    );
   }
+
+}
+

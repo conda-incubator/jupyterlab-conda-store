@@ -5,6 +5,7 @@ node_modules/
 .ipynb_checkpoints
 *.tsbuildinfo
 jupyterlab_conda_store/labextension/
+_srcbak
 
 src/version.ts
 
