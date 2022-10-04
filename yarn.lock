@@ -1065,10 +1065,10 @@
     style-mod "^4.0.0"
     w3c-keyname "^2.2.4"
 
-"@conda-store/conda-store-ui@^0.0.1-alpha.1":
-  version "0.0.1-alpha.1"
-  resolved "https://registry.yarnpkg.com/@conda-store/conda-store-ui/-/conda-store-ui-0.0.1-alpha.1.tgz#502e8be48113060d22a6f0a141d536fe28310be8"
-  integrity sha512-D8l4XUzklHiBmD7WSUih80BIFGdh2IUuB9zbb1vsf0tYw4ud57gcB1QZkEN19KVhy/kg/nTpyGN+q8IlXdEocQ==
+"@conda-store/conda-store-ui@^0.0.1-alpha.4":
+  version "0.0.1-alpha.4"
+  resolved "https://registry.yarnpkg.com/@conda-store/conda-store-ui/-/conda-store-ui-0.0.1-alpha.4.tgz#4c333dcc06dd0da7612ee1470c06557204f8ea03"
+  integrity sha512-th6wPExirHnrow6unpm+OSKLqfzjBufCui+HJn0UZPZzYj8gQwW50YJ4OcC/8NjMvGqNIZryg1PX5Jm9ldYeBA==
   dependencies:
     "@codemirror/language" "^6.2.1"
     "@codemirror/legacy-modes" "^6.1.0"
@@ -1083,6 +1083,7 @@
     "@types/react-test-renderer" "^18.0.0"
     "@types/redux" "^3.6.0"
     "@uiw/react-codemirror" "^4.11.4"
+    compare-versions "^5.0.1"
     date-fns "^2.29.1"
     lodash "^4.17.21"
     react "^18.0.0"
@@ -3955,6 +3956,11 @@ commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==
+
+compare-versions@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-5.0.1.tgz#14c6008436d994c3787aba38d4087fabe858555e"
+  integrity sha512-v8Au3l0b+Nwkp4G142JcgJFh1/TUhdxut7wzD1Nq1dyp5oa3tXaqb03EXOAB6jS4gMlalkjAUPZBMiAfKUixHQ==
 
 component-emitter@^1.2.1:
   version "1.3.0"
