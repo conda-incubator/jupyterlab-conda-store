@@ -1,3 +1,4 @@
+import { IPreferences } from '@conda-store/conda-store-ui';
 import {
   ILayoutRestorer,
   JupyterFrontEnd,
@@ -10,7 +11,12 @@ import { ISettingRegistry } from '@jupyterlab/settingregistry';
 import { condaStoreNotextIcon } from './style';
 import { CondaStoreWidget } from './widget';
 
-
+const prefDefault: IPreferences = {
+  apiUrl: "http://localhost:5000/conda-store/",
+  authMethod: "cookie",
+  loginUrl: "http://localhost:5000/conda-store/login?next",
+  authToken: "",
+}
 
 /**
  * Initialization data for the jupyterlab-conda-store extension.
@@ -48,7 +54,7 @@ async function activate(
     
     // Create the Git widget sidebar
     const id = 'jp-conda-store-sidebar';
-    const condaStoreExtension = new CondaStoreWidget(settings);
+    const condaStoreExtension = new CondaStoreWidget(settings, prefDefault);
     condaStoreExtension.id = id;
     condaStoreExtension.title.icon = condaStoreNotextIcon;
     condaStoreExtension.title.caption = 'conda-store extension';
