@@ -15,6 +15,14 @@ const prefDefault: IPreferences = {
 
 Once the values are changed as you like, follow the rest of the "Development install" instruction to build.
 
+The built in defaullt settings will work with the default docker dev build of conda-store. Just clone the `quansight/conda-store` repo, then run:
+
+```bash
+docker compose up --builld
+```
+
+and you should have a dev version of the `conda-store` server that will play nicely with the default pref values of this extension. The `conda-store` login for the dev server is `admin`/`password`.
+
 ### Development install
 
 Note: You will need NodeJS to build the extension package.
