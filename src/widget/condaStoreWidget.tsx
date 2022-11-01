@@ -21,7 +21,9 @@ class JlabApp extends App<IJlabAppProps> {
 
   componentDidMount(): void {
     const slot = () => {
-      this.setState({...this.state, ...this.settings.composite});
+      this.setState({
+        pref: {...this.state.pref, ...this.settings.composite}
+      });
     }
 
     this.settings.changed.connect(slot);
@@ -35,7 +37,7 @@ class JlabApp extends App<IJlabAppProps> {
 }
 
 export class CondaStoreWidget extends ReactWidget {
-  constructor(settings: ISettingRegistry.ISettings) {
+  constructor(settings: IJlabAppProps["settings"]) {
     super();
     this.settings = settings;
   }
@@ -46,6 +48,6 @@ export class CondaStoreWidget extends ReactWidget {
     );
   }
 
-  settings: ISettingRegistry.ISettings;
+  settings: IJlabAppProps["settings"];
 }
 
