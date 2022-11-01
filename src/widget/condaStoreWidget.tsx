@@ -1,40 +1,51 @@
 import * as React from 'react';
 
-import { App, IPreferences } from "@conda-store/conda-store-ui"
+import { App, IAppProps } from "@conda-store/conda-store-ui"
 import { ReactWidget } from '@jupyterlab/apputils';
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
 
 
+interface IJlabAppProps extends IAppProps {
+  settings: ISettingRegistry.ISettings;
+}
+
+class JlabApp extends App<IJlabAppProps> {
+  constructor({settings}: IJlabAppProps) {
+    super({
+      pref: settings.composite as IAppProps["pref"],
+      settings,
+    });
+
+    this.settings = settings;
+  }
+
+  componentDidMount(): void {
+    const slot = () => {
+      this.setState({...this.state, ...this.settings.composite});
+    }
+
+    this.settings.changed.connect(slot);
+  }
+
+  // componentWillUnmount(): void {
+  //   this.settings.changed.disconnect
+  // }
+
+  settings: IJlabAppProps["settings"];
+}
+
 export class CondaStoreWidget extends ReactWidget {
-  constructor(settings: ISettingRegistry.ISettings, prefDefault: IPreferences) {
+  constructor(settings: ISettingRegistry.ISettings) {
     super();
-    this.prefDefault = prefDefault;
     this.settings = settings;
   }
 
   render(): JSX.Element {
-    // return (
-    //   <App initState={
-    //     setter => {
-    //       this.settings.changed.connect(() => setter(this.settings.composite));
-    //       setter(this.settings.composite);
-    //     }
-    //   } />
-    // );
     return (
-      <App 
-        prefs={this.prefDefault}
-        initState={
-          setter => {
-            setter(this.prefDefault)
-          }
-        }
-      />
+      <JlabApp settings={this.settings} />
     );
   }
 
-  prefDefault: IPreferences;
   settings: ISettingRegistry.ISettings;
-  // initState: (setter: ((prefs: IPreferences) => void)) => void;
 }
 
