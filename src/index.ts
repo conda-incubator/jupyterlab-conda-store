@@ -59,6 +59,11 @@ async function activate(
     // Rank has been chosen somewhat arbitrarily to give priority to the running
     // sessions widget in the sidebar.
     app.shell.add(condaStoreExtension, 'left', { rank: 200 });
+
+    // MVP solution for forcing app refresh (including full api refetch) on pref change
+    settings.changed.connect(() => {
+      condaStoreExtension.rerender();
+    });
   } catch (error) {
     console.error('Failed to load settings for the conda-store Extension.\n%1', error);
   }
