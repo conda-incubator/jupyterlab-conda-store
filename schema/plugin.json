@@ -6,17 +6,30 @@
   "description": "jupyterlab-conda-store settings.",
   "type": "object",
   "properties": {
-    "condaStoreUrl": {
+    "apiUrl": {
       "type": "string",
       "title": "conda-store server url",
-      "description": "the url for your conda-store server. The server needs to already be running for the jupyterlab extension to work",
-      "default": "http://localhost"
+      "description": "the url (including port, if any) for your conda-store server. The conda-store server needs to already be running for the jupyterlab extension to work",
+      "default": "http://localhost:5000/conda-store/"
     },
-    "condaStorePort": {
-      "type": "integer",
-      "title": "conda-store server port",
-      "description": "the url for your conda-store server. The server needs to already be running for the jupyterlab extension to work",
-      "default": 5000
+    "authMethod": {
+      "type": "string",
+      "title": "conda-store auth method",
+      "enum": ["cookie", "token"],
+      "description": "authentication method used for requests to your conda-store server",
+      "default": "cookie"
+    },
+    "loginUrl": {
+      "type": "string",
+      "title": "conda-store login url",
+      "description": "if using cookie-based authentication, the path to the login page. See the conda-store auth method option",
+      "default": "http://localhost:5000/conda-store/login?next"
+    },
+    "authToken": {
+      "type": "string",
+      "title": "conda-store auth token",
+      "description": "if using token-based authentication, the value of said token. See the conda-store auth method option",
+      "default": ""
     }
   },
   "additionalProperties": false
