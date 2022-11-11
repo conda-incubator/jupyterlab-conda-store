@@ -1065,15 +1065,16 @@
     style-mod "^4.0.0"
     w3c-keyname "^2.2.4"
 
-"@conda-store/conda-store-ui@^0.0.1-alpha.6":
-  version "0.0.1-alpha.6"
-  resolved "https://registry.yarnpkg.com/@conda-store/conda-store-ui/-/conda-store-ui-0.0.1-alpha.6.tgz#c52c4c2a0e7dbaa049f16dc4c4acb99b7e1390b6"
-  integrity sha512-7UW3s0DBIV5+OPmLYaXdd7N81Q1qJdS/23utmPv+IaHh3jHsNXvap8XxAodU7Uage30jYBO8J8r/+NrgEkQ2fA==
+"@conda-store/conda-store-ui@^0.0.1-alpha.7":
+  version "0.0.1-alpha.7"
+  resolved "https://registry.yarnpkg.com/@conda-store/conda-store-ui/-/conda-store-ui-0.0.1-alpha.7.tgz#52c4f138280aa772977896ca57c3f181613e8207"
+  integrity sha512-yTOcku9bT3jibeH4rGnBlSOPg8LnWCgX1v8jU4rJG24KVv4bVPGMDglB/C0yJEYZXUjW8vkuu70ffVYayi70TQ==
   dependencies:
     "@codemirror/language" "^6.2.1"
     "@codemirror/legacy-modes" "^6.1.0"
     "@emotion/react" "^11.9.0"
     "@emotion/styled" "^11.8.1"
+    "@lezer/highlight" "^1.1.2"
     "@mui/icons-material" "^5.8.4"
     "@mui/material" "^5.6.1"
     "@reduxjs/toolkit" "^1.8.2"
@@ -1082,9 +1083,11 @@
     "@types/react-redux" "^7.1.24"
     "@types/react-test-renderer" "^18.0.0"
     "@types/redux" "^3.6.0"
+    "@uiw/codemirror-themes" "^4.12.4"
     "@uiw/react-codemirror" "^4.11.4"
     compare-versions "^5.0.1"
-    date-fns "^2.29.1"
+    date-fns "^2.29.3"
+    date-fns-tz "^1.3.7"
     lodash "^4.17.21"
     react "^18.0.0"
     react-beautiful-dnd "^13.1.0"
@@ -2454,6 +2457,13 @@
   dependencies:
     "@lezer/common" "^1.0.0"
 
+"@lezer/highlight@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@lezer/highlight/-/highlight-1.1.2.tgz#60cd6c2a0a2cf753b8a026b04feeb0ea8df326ea"
+  integrity sha512-CAun1WR1glxG9ZdOokTZwXbcwB7PXkIEyZRUMFBVwSrhTcogWq634/ByNImrkUnQhjju6xsIaOBIxvcRJtplXQ==
+  dependencies:
+    "@lezer/common" "^1.0.0"
+
 "@lezer/lr@^1.0.0":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@lezer/lr/-/lr-1.2.3.tgz#f44ca844f15f6762fde4eab877d110567e34ffa1"
@@ -3124,6 +3134,15 @@
     "@codemirror/language" "^6.0.0"
     "@codemirror/lint" "^6.0.0"
     "@codemirror/search" "^6.0.0"
+    "@codemirror/state" "^6.0.0"
+    "@codemirror/view" "^6.0.0"
+
+"@uiw/codemirror-themes@^4.12.4":
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/@uiw/codemirror-themes/-/codemirror-themes-4.13.0.tgz#1b4ffe58d10cf4ad7e231f10c9829d3e39b903cf"
+  integrity sha512-wYSc7eccNAaWZYIKr6ncWhlZw99qOaNFCTgz3bbQhYgoqMXzYhImICkLo7iNvMhJe+rR4tl2HnRj8Tstb6rZTA==
+  dependencies:
+    "@codemirror/language" "^6.0.0"
     "@codemirror/state" "^6.0.0"
     "@codemirror/view" "^6.0.0"
 
@@ -4481,10 +4500,15 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-date-fns@^2.29.1:
-  version "2.29.2"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.2.tgz#0d4b3d0f3dff0f920820a070920f0d9662c51931"
-  integrity sha512-0VNbwmWJDS/G3ySwFSJA3ayhbURMTJLtwM2DTxf9CWondCnh6DTNlO9JgRSq6ibf4eD0lfMJNBxUdEAHHix+bA==
+date-fns-tz@^1.3.7:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/date-fns-tz/-/date-fns-tz-1.3.7.tgz#e8e9d2aaceba5f1cc0e677631563081fdcb0e69a"
+  integrity sha512-1t1b8zyJo+UI8aR+g3iqr5fkUHWpd58VBx8J/ZSQ+w7YrGlw80Ag4sA86qkfCXRBLmMc4I2US+aPMd4uKvwj5g==
+
+date-fns@^2.29.3:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.3.tgz#27402d2fc67eb442b511b70bbdf98e6411cd68a8"
+  integrity sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==
 
 dayjs@1.11.5:
   version "1.11.5"
