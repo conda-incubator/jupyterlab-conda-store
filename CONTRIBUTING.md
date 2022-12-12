@@ -10,6 +10,8 @@ const prefDefault: IPreferences = {
   authMethod: "cookie",
   loginUrl: "http://localhost:5000/conda-store/login?next",
   authToken: "",
+  styleType: "grayscale",
+  showLoginIcon: true
 }
 ```
 
