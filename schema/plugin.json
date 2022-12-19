@@ -42,7 +42,7 @@
       "type": "boolean",
       "title": "conda-store show icon login",
       "description": "show or hide the login icon, which is located at the top",
-      "default": "true"
+      "default": true
     }
   },
   "additionalProperties": false
