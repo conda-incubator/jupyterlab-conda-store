@@ -47,9 +47,9 @@ async function activate(
           widget = new MainAreaWidget({ content: condaStoreExtension });
           widget.id = 'jp-conda-store';
           widget.title.label = 'conda-store';
+          widget.title.caption = 'conda-store extension';
+          widget.title.icon = condaStoreNotextIcon;
           widget.title.closable = true;
-          condaStoreExtension.title.icon = condaStoreNotextIcon;
-          condaStoreExtension.title.caption = 'conda-store extension';
         }
 
         if (!widget.isAttached) {
