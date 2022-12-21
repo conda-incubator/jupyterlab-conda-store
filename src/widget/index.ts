@@ -1,1 +1,1 @@
-export * from "./condaStoreWidget";
+export * from './condaStoreWidget';

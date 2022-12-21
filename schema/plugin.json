@@ -2,6 +2,19 @@
   "jupyter.lab.setting-icon": "conda-store:conda-store-icon",
   "jupyter.lab.setting-icon-label": "conda-store",
   "jupyter.lab.shortcuts": [],
+  "jupyter.lab.menus": {
+    "main": [
+      {
+        "id": "jp-mainmenu-settings",
+        "items": [
+          {
+            "command": "condastore:open",
+            "rank": 500
+          }
+        ]
+      }
+    ]
+  },
   "title": "jupyterlab-conda-store",
   "description": "jupyterlab-conda-store settings.",
   "type": "object",
