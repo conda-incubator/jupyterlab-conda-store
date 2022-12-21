@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-conda-store",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A jupyterlab extension that provides a beautiful, user-friendly graphical interface for building and managing environments using ayour existing conda-store server",
   "keywords": [
     "jupyter",
@@ -55,7 +55,7 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
-    "@conda-store/conda-store-ui": "^0.0.1-alpha.8",
+    "@conda-store/conda-store-ui": "^0.0.1-alpha.9",
     "@jupyterlab/application": "^3.1.0",
     "@jupyterlab/apputils": "^3.1.0",
     "@jupyterlab/settingregistry": "^3.1.0",

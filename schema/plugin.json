@@ -43,6 +43,19 @@
       "title": "conda-store auth token",
       "description": "if using token-based authentication, the value of said token. See the conda-store auth method option",
       "default": ""
+    },
+    "styleType": {
+      "type": "string",
+      "title": "conda-store app theme style",
+      "enum": ["grayscale", "green-accent"],
+      "description": "set the style theme of the app using the provided options.",
+      "default": "green-accent"
+    },
+    "showLoginIcon": {
+      "type": "boolean",
+      "title": "conda-store show icon login",
+      "description": "show or hide the login icon, which is located at the top",
+      "default": true
     }
   },
   "additionalProperties": false
