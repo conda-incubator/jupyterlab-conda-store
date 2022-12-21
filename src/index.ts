@@ -7,6 +7,7 @@ import { ISettingRegistry } from '@jupyterlab/settingregistry';
 import { ICommandPalette, MainAreaWidget } from '@jupyterlab/apputils';
 import { Widget } from '@lumino/widgets';
 import { CondaStoreWidget } from './widget';
+import { condaStoreNotextIcon } from './style';
 
 /**
  * Initialization data for the myextension extension.
@@ -39,7 +40,7 @@ async function activate(
 
     const command = 'condastore:open';
     app.commands.addCommand(command, {
-      label: 'Conda Store',
+      label: 'Initialize conda store',
       execute: () => {
         if (!widget || widget.isDisposed) {
           condaStoreExtension = new CondaStoreWidget(settings);
@@ -47,6 +48,8 @@ async function activate(
           widget.id = 'jp-conda-store';
           widget.title.label = 'conda-store';
           widget.title.closable = true;
+          condaStoreExtension.title.icon = condaStoreNotextIcon;
+          condaStoreExtension.title.caption = 'conda-store extension';
         }
 
         if (!widget.isAttached) {
