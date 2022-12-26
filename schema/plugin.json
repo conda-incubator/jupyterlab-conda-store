@@ -5,8 +5,8 @@
   "jupyter.lab.menus": {
     "main": [
       {
-        "id": "jp-mainmenu-myextension",
-        "label": "conda store",
+        "id": "jp-mainmenu-jupyterlab-conda-store",
+        "label": "conda-store",
         "items": [
           {
             "command": "condastore:open",

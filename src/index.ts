@@ -10,7 +10,7 @@ import { CondaStoreWidget } from './widget';
 import { condaStoreNotextIcon } from './style';
 
 /**
- * Initialization data for the myextension extension.
+ * Initialization data for the jupyterlab-conda-store extension.
  */
 
 const plugin: JupyterFrontEndPlugin<void> = {
@@ -40,7 +40,7 @@ async function activate(
 
     const command = 'condastore:open';
     app.commands.addCommand(command, {
-      label: 'Initialize conda store',
+      label: 'Initialize conda-store',
       execute: () => {
         if (!widget || widget.isDisposed) {
           condaStoreExtension = new CondaStoreWidget(settings);
