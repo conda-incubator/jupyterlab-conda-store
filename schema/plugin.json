@@ -37,7 +37,7 @@
       "type": "string",
       "title": "conda-store login url",
       "description": "if using cookie-based authentication, the path to the login page. See the conda-store auth method option",
-      "default": "http://localhost:5000/conda-store/login?next"
+      "default": "http://localhost:5000/conda-store/login?next="
     },
     "authToken": {
       "type": "string",
