@@ -39,7 +39,7 @@ async function activate(
 
     const command = 'condastore:open';
     app.commands.addCommand(command, {
-      label: 'Conda Store Packages Manager',
+      label: 'Conda Store Package Manager',
       execute: () => {
         if (!widget || widget.isDisposed) {
           condaStoreExtension = new CondaStoreWidget(settings);
@@ -70,7 +70,7 @@ async function activate(
     // Create the conda-store top-level menu
     if (addCustomMenuItem) {
       const condaStoreMenu = new Menu({ commands: app.commands });
-      condaStoreMenu.title.label = 'Conda Store';
+      condaStoreMenu.title.label = 'Conda-Store';
       condaStoreMenu.addItem({
         command,
         args: {}
