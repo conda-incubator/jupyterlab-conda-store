@@ -2,6 +2,20 @@
   "jupyter.lab.setting-icon": "conda-store:conda-store-icon",
   "jupyter.lab.setting-icon-label": "conda-store",
   "jupyter.lab.shortcuts": [],
+  "jupyter.lab.menus": {
+    "main": [
+      {
+        "id": "jp-mainmenu-jupyterlab-conda-store",
+        "label": "conda-store",
+        "items": [
+          {
+            "command": "condastore:open",
+            "rank": 500
+          }
+        ]
+      }
+    ]
+  },
   "title": "jupyterlab-conda-store",
   "description": "jupyterlab-conda-store settings.",
   "type": "object",
@@ -23,13 +37,26 @@
       "type": "string",
       "title": "conda-store login url",
       "description": "if using cookie-based authentication, the path to the login page. See the conda-store auth method option",
-      "default": "http://localhost:5000/conda-store/login?next"
+      "default": "http://localhost:5000/conda-store/login?next="
     },
     "authToken": {
       "type": "string",
       "title": "conda-store auth token",
       "description": "if using token-based authentication, the value of said token. See the conda-store auth method option",
       "default": ""
+    },
+    "styleType": {
+      "type": "string",
+      "title": "conda-store app theme style",
+      "enum": ["grayscale", "green-accent"],
+      "description": "set the style theme of the app using the provided options.",
+      "default": "green-accent"
+    },
+    "showLoginIcon": {
+      "type": "boolean",
+      "title": "conda-store show icon login",
+      "description": "show or hide the login icon, which is located at the top",
+      "default": true
     }
   },
   "additionalProperties": false

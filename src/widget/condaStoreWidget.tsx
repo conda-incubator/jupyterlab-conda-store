@@ -1,20 +1,19 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { App, IAppProps } from "@conda-store/conda-store-ui"
+import { App, IAppProps } from '@conda-store/conda-store-ui';
 import { ReactWidget } from '@jupyterlab/apputils';
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
-
 
 interface IJlabAppProps extends IAppProps {
   settings: ISettingRegistry.ISettings;
 }
 
 class JlabApp extends App<IJlabAppProps> {
-  constructor({settings}: IJlabAppProps) {
+  constructor({ settings }: IJlabAppProps) {
     super({
-      pref: settings.composite as IAppProps["pref"],
-      settings,
+      pref: settings.composite as IAppProps['pref'],
+      settings
     });
 
     this.settings = settings;
@@ -33,25 +32,23 @@ class JlabApp extends App<IJlabAppProps> {
   //   this.settings.changed.disconnect
   // }
 
-  settings: IJlabAppProps["settings"];
+  settings: IJlabAppProps['settings'];
 }
 
 export class CondaStoreWidget extends ReactWidget {
-  constructor(settings: IJlabAppProps["settings"]) {
+  constructor(settings: IJlabAppProps['settings']) {
     super();
     this.settings = settings;
   }
 
   render(): JSX.Element {
-    return (
-      <JlabApp settings={this.settings} />
-    );
+    return <JlabApp settings={this.settings} />;
   }
 
   rerender(): Promise<void> {
     return new Promise<void>(resolve => {
       ReactDOM.unmountComponentAtNode(this.node);
-      
+
       const vnode = this.render();
       if (vnode) {
         ReactDOM.render(vnode, this.node, resolve);
@@ -63,6 +60,5 @@ export class CondaStoreWidget extends ReactWidget {
     });
   }
 
-  settings: IJlabAppProps["settings"];
+  settings: IJlabAppProps['settings'];
 }
-

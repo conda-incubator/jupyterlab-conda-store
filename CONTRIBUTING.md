@@ -6,11 +6,13 @@ Currently the pref pass-thru from the jupyterlab frontend to the underlying cond
 
 ```typescript
 const prefDefault: IPreferences = {
-  apiUrl: "http://localhost:5000/conda-store/",
-  authMethod: "cookie",
-  loginUrl: "http://localhost:5000/conda-store/login?next",
-  authToken: "",
-}
+  apiUrl: 'http://localhost:5000/conda-store/',
+  authMethod: 'cookie',
+  loginUrl: 'http://localhost:5000/conda-store/login?next=',
+  authToken: '',
+  styleType: 'grayscale',
+  showLoginIcon: true
+};
 ```
 
 Once the values are changed as you like, follow the rest of the "Development install" instruction to build.

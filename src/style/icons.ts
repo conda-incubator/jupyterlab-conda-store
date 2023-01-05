@@ -6,10 +6,10 @@ import condaStoreNotextSvg from '../../style/icon/conda-store-notext-logo.svg';
 
 export const condaStoreIcon = new LabIcon({
   name: 'conda-store:conda-store-icon',
-  svgstr: condaStoreSvg,
+  svgstr: condaStoreSvg
 });
 
 export const condaStoreNotextIcon = new LabIcon({
   name: 'conda-store:conda-store-notext-icon',
-  svgstr: condaStoreNotextSvg,
+  svgstr: condaStoreNotextSvg
 });
