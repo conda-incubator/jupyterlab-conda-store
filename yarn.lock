@@ -1065,10 +1065,10 @@
     style-mod "^4.0.0"
     w3c-keyname "^2.2.4"
 
-"@conda-store/conda-store-ui@^0.0.1-alpha.7":
-  version "0.0.1-alpha.7"
-  resolved "https://registry.yarnpkg.com/@conda-store/conda-store-ui/-/conda-store-ui-0.0.1-alpha.7.tgz#52c4f138280aa772977896ca57c3f181613e8207"
-  integrity sha512-yTOcku9bT3jibeH4rGnBlSOPg8LnWCgX1v8jU4rJG24KVv4bVPGMDglB/C0yJEYZXUjW8vkuu70ffVYayi70TQ==
+"@conda-store/conda-store-ui@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@conda-store/conda-store-ui/-/conda-store-ui-0.1.0.tgz#e67f0e400301ddf7af27e344891b0192e3a223a7"
+  integrity sha512-2b8WaOsZat0nrBxfc/uMackEaVp0HpO4dE2d4l0PgxlnfMJIqZUVXDsSopZMB3UtWr6L/cihHOUokrgbYpTzOQ==
   dependencies:
     "@codemirror/language" "^6.2.1"
     "@codemirror/legacy-modes" "^6.1.0"
@@ -1081,7 +1081,6 @@
     "@types/react" "^18.0.0"
     "@types/react-dom" "^18.0.0"
     "@types/react-redux" "^7.1.24"
-    "@types/react-test-renderer" "^18.0.0"
     "@types/redux" "^3.6.0"
     "@uiw/codemirror-themes" "^4.12.4"
     "@uiw/react-codemirror" "^4.11.4"
@@ -2964,13 +2963,6 @@
     "@types/react" "*"
     hoist-non-react-statics "^3.3.0"
     redux "^4.0.0"
-
-"@types/react-test-renderer@^18.0.0":
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-18.0.0.tgz#7b7f69ca98821ea5501b21ba24ea7b6139da2243"
-  integrity sha512-C7/5FBJ3g3sqUahguGi03O79b8afNeSD6T8/GU50oQrJCU0bVCCGQHaGKUbg2Ce8VQEEqTw8/HiS6lXHHdgkdQ==
-  dependencies:
-    "@types/react" "*"
 
 "@types/react-transition-group@^4.4.5":
   version "4.4.5"
