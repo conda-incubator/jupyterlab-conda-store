@@ -76,6 +76,8 @@ async function activate(
         args: {}
       });
       mainMenu.addMenu(condaStoreMenu, { rank: 1000 });
+    } else {
+      mainMenu.settingsMenu.addGroup([{ command }], 900);
     }
   } catch (error) {
     console.error(
