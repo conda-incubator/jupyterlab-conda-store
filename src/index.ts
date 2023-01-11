@@ -1,31 +1,29 @@
 import {
-  ILayoutRestorer,
   JupyterFrontEnd,
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
-import { ICommandPalette, MainAreaWidget } from '@jupyterlab/apputils';
-import { Widget } from '@lumino/widgets';
+import { IMainMenu } from '@jupyterlab/mainmenu';
+import { MainAreaWidget } from '@jupyterlab/apputils';
+import { Menu, Widget } from '@lumino/widgets';
 import { CondaStoreWidget } from './widget';
 import { condaStoreNotextIcon } from './style';
 
 /**
  * Initialization data for the jupyterlab-conda-store extension.
  */
-
 const plugin: JupyterFrontEndPlugin<void> = {
   activate,
   autoStart: true,
   id: 'jupyterlab-conda-store:plugin',
-  requires: [ISettingRegistry, ICommandPalette, ILayoutRestorer]
+  requires: [ISettingRegistry, IMainMenu]
 };
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 async function activate(
   app: JupyterFrontEnd,
   settingRegistry: ISettingRegistry,
-  palette: ICommandPalette,
-  restorer: ILayoutRestorer
+  mainMenu: IMainMenu
 ) {
   console.log('JupyterLab extension conda-store is activated!');
 
@@ -37,10 +35,11 @@ async function activate(
 
   try {
     settings = await settingRegistry.load(plugin.id);
+    const addCustomMenuItem = settings?.composite.addMainMenuItem ?? true;
 
     const command = 'condastore:open';
     app.commands.addCommand(command, {
-      label: 'Initialize conda-store',
+      label: 'Conda Store Package Manager',
       execute: () => {
         if (!widget || widget.isDisposed) {
           condaStoreExtension = new CondaStoreWidget(settings);
@@ -68,7 +67,18 @@ async function activate(
       }
     });
 
-    palette.addItem({ command, category: 'Extension' });
+    // Create the conda-store top-level menu
+    if (addCustomMenuItem) {
+      const condaStoreMenu = new Menu({ commands: app.commands });
+      condaStoreMenu.title.label = 'Conda-Store';
+      condaStoreMenu.addItem({
+        command,
+        args: {}
+      });
+      mainMenu.addMenu(condaStoreMenu, { rank: 1000 });
+    } else {
+      mainMenu.settingsMenu.addGroup([{ command }], 900);
+    }
   } catch (error) {
     console.error(
       'Failed to load settings for the conda-store Extension.\n%1',

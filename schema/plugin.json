@@ -2,20 +2,6 @@
   "jupyter.lab.setting-icon": "conda-store:conda-store-icon",
   "jupyter.lab.setting-icon-label": "conda-store",
   "jupyter.lab.shortcuts": [],
-  "jupyter.lab.menus": {
-    "main": [
-      {
-        "id": "jp-mainmenu-jupyterlab-conda-store",
-        "label": "conda-store",
-        "items": [
-          {
-            "command": "condastore:open",
-            "rank": 500
-          }
-        ]
-      }
-    ]
-  },
   "title": "jupyterlab-conda-store",
   "description": "jupyterlab-conda-store settings.",
   "type": "object",
@@ -56,6 +42,12 @@
       "type": "boolean",
       "title": "conda-store show icon login",
       "description": "show or hide the login icon, which is located at the top",
+      "default": true
+    },
+    "addMainMenuItem": {
+      "type": "boolean",
+      "title": "conda-store menu item",
+      "description": "add the conda-store item to the main menu.",
       "default": true
     }
   },
