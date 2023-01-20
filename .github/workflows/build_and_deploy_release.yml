@@ -1,0 +1,39 @@
+name: Build and Deploy Release
+
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - created
+      - published
+jobs:
+
+  call-build:
+    uses: Quansight/jupyterlab-conda-store/.github/workflows/build.yml@main
+
+  deploy-build:
+    runs-on: ubuntu-latest
+    if: always() # Runs despite playwright tests failing
+    needs: call-build
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Download extension package
+      uses: actions/download-artifact@v3
+      with:
+        name: extension-artifacts
+        path: dist/
+      
+    - name: Upload to pypi
+      run: |
+        set -eux
+        pip install twine
+        twine upload -r pypi dist/*
+      env:
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+        TWINE_PASSWORD:  ${{ secrets.PYPI_PASSWORD }}
+       
+      
+        

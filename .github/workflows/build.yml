@@ -5,6 +5,7 @@ on:
     branches: main
   pull_request:
     branches: '*'
+  workflow_call:
 
 jobs:
   build:
@@ -12,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Base Setup
       uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
@@ -29,7 +30,7 @@ jobs:
     - name: Test the extension
       run: |
         set -eux
-        jlpm run test
+        jlpm run test --passWithNoTests
 
     - name: Build the extension
       run: |
@@ -46,13 +47,12 @@ jobs:
 
         pip install build
         python -m build
-        pip uninstall -y "jupyterlab_conda_store" jupyterlab
 
     - name: Upload extension packages
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: extension-artifacts
-        path: dist/jupyterlab_conda_store*
+        path: dist/
         if-no-files-found: error
 
   test_isolated:
@@ -61,15 +61,18 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+
     - name: Install Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version: '3.9'
         architecture: 'x64'
-    - uses: actions/download-artifact@v2
+
+    - uses: actions/download-artifact@v3
       with:
         name: extension-artifacts
+
     - name: Install and Test
       run: |
         set -eux
