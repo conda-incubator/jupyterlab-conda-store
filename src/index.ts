@@ -7,7 +7,8 @@ import { IMainMenu } from '@jupyterlab/mainmenu';
 import { MainAreaWidget } from '@jupyterlab/apputils';
 import { Menu, Widget } from '@lumino/widgets';
 import { CondaStoreWidget } from './widget';
-import { condaStoreNotextIcon } from './style';
+import { condaStoreNotextIcon, condaStoreNotextIconGreenAccent } from './style';
+
 
 /**
  * Initialization data for the jupyterlab-conda-store extension.
@@ -47,7 +48,7 @@ async function activate(
           widget.id = 'jp-conda-store';
           widget.title.label = 'conda-store';
           widget.title.caption = 'conda-store extension';
-          widget.title.icon = condaStoreNotextIcon;
+          widget.title.icon = settings?.composite.styleType == 'grayscale' ?  condaStoreNotextIcon : condaStoreNotextIconGreenAccent;
           widget.title.closable = true;
         }
 
