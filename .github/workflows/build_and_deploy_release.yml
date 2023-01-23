@@ -2,10 +2,9 @@ name: Build and Deploy Release
 
 on:
   workflow_dispatch:
-  release:
-    types:
-      - created
-      - published
+  push:
+    tags:        
+      - 'v*'          
 jobs:
 
   call-build:
