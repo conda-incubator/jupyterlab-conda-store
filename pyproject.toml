@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "jupyterlab-conda-store"
-version = "0.2.4"
+version = "0.2.5"
 description = "A jupyterlab extension that provides a beautiful, user-friendly graphical interface for building and managing environments using ayour existing conda-store server"
 readme = "README.md"
 license = { file = "LICENSE" }
