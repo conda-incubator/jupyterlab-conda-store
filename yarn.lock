@@ -1065,10 +1065,10 @@
     style-mod "^4.0.0"
     w3c-keyname "^2.2.4"
 
-"@conda-store/conda-store-ui@0.1.3-rc4":
-  version "0.1.3-rc4"
-  resolved "https://registry.yarnpkg.com/@conda-store/conda-store-ui/-/conda-store-ui-0.1.3-rc4.tgz#10a53c630dbd2dae0a7ede2140a26b6a6ecaadda"
-  integrity sha512-ajHS6XsCzwKyzhPSWmFaRmoVeQ2N3F9RQVXR00z6m9C+px/Z11E6uNe9/qo5zg9Bv2CP2kad1F31B1BR+lVByw==
+"@conda-store/conda-store-ui@0.1.3-rc5":
+  version "0.1.3-rc5"
+  resolved "https://registry.yarnpkg.com/@conda-store/conda-store-ui/-/conda-store-ui-0.1.3-rc5.tgz#79a7aae5ac8a7348bf63f50fe5f0e79c64bef263"
+  integrity sha512-tmJjCsmF5nQQh7Mj5JDGT/Yu/aXDscugDG0zNbHKt529rgNTthugzc3fe3OERnu4K4QTLhNZgSy7cr+U57sRGA==
   dependencies:
     "@codemirror/language" "^6.2.1"
     "@codemirror/legacy-modes" "^6.1.0"
@@ -3943,9 +3943,9 @@ duplicate-package-checker-webpack-plugin@^3.0.0:
     semver "^5.4.1"
 
 electron-to-chromium@^1.4.284:
-  version "1.4.304"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.304.tgz#d6eb7fea4073aacc471cf117df08b4b4978dc6ad"
-  integrity sha512-6c8M+ojPgDIXN2NyfGn8oHASXYnayj+gSEnGeLMKb9zjsySeVB/j7KkNAAG9yDcv8gNlhvFg5REa1N/kQU6pgA==
+  version "1.4.305"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.305.tgz#e4dfe3e06ab783f33171f9bde9e8ed092510fcd0"
+  integrity sha512-WETy6tG0CT5gm1O+xCbyapWNsCcmIvrn4NHViIGYo2AT8FV2qUCXdaB+WqYxSv/vS5mFqhBYnfZAAkVArjBmUg==
 
 emittery@^0.7.1:
   version "0.7.2"
@@ -6055,9 +6055,9 @@ levn@~0.3.0:
     type-check "~0.3.2"
 
 lib0@^0.2.31, lib0@^0.2.42, lib0@^0.2.49, lib0@^0.2.52:
-  version "0.2.62"
-  resolved "https://registry.yarnpkg.com/lib0/-/lib0-0.2.62.tgz#c4e6860751ba7674a0dca51bb3c23d80985852de"
-  integrity sha512-DY0G8AaQloUvpiss7EpAo/t4R82b9m/AydbQRNAa9Khssn9oGDJnSN8Q1qQ8u82Wog4iaT1O8yM+DfhzGCrrpQ==
+  version "0.2.63"
+  resolved "https://registry.yarnpkg.com/lib0/-/lib0-0.2.63.tgz#9fe7c26686fbb4b1578bc0d8ee1d308ad6115d4e"
+  integrity sha512-JhUd/JXR4rnWsSP1zup904ACbVFcdRieWoIGwGAtHww4zms0gNyi8EM30Rfftnk+6A10qQMSufjLM0/ncq06xw==
   dependencies:
     isomorphic.js "^0.2.4"
 
