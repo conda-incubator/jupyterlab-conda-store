@@ -1,4 +1,4 @@
-# conda-store jupyterlab extension
+ conda-store jupyterlab extension
 
 ![Github Build Action Status](https://github.com/Quansight/jupyterlab-conda-store/.github/workflows/build.yml/badge.svg)
 ![Github Deploy Action Status](https://github.com/Quansight/jupyterlab-conda-store/.github/workflows/build_and_deploy.yml/badge.svg)
