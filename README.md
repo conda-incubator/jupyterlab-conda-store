@@ -27,6 +27,6 @@ pip uninstall jupyterlab-conda-store
 
 To create a new pacakge and release:
 
-1) Bump the version as indicated in `pyproject.toml` and `package.json`
+1. Bump the version as indicated in `pyproject.toml` and `package.json`
 
-2) Create a new release, and then enusre the release tag is the same as the bumped version revisions.
+2. Create a new release, and then enusre the release tag is the same as the bumped version revisions.
