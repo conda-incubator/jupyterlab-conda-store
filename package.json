@@ -7,9 +7,9 @@
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/quansight/jupyterlab-conda-store",
+  "homepage": "https://github.com/conda-incubator/jupyterlab-conda-store",
   "bugs": {
-    "url": "https://github.com/quansight/jupyterlab-conda-store/issues"
+    "url": "https://github.com/conda-incubator/jupyterlab-conda-store/issues"
   },
   "license": "BSD-3-Clause",
   "author": {
