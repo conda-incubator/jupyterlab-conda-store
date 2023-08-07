@@ -40,7 +40,7 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/quansight/jupyterlab-conda-store"
+Homepage = "https://github.com/conda-incubator/jupyterlab-conda-store"
 
 [tool.hatch.build]
 artifacts = ["jupyterlab_conda_store/labextension"]

@@ -33,3 +33,11 @@ To create a new pacakge and release:
 1. Bump the version as indicated in `pyproject.toml` and `package.json`
 
 2. Create a new release, and then enusre the release tag is the same as the bumped version tag.
+
+## Code of Conduct
+
+To guarantee a welcoming and friendly community, we require all community members to follow our [Code of Conduct](https://github.com/conda-incubator/governance/blob/main/CODE_OF_CONDUCT.md).
+
+## License
+
+jupyterlab-conda-store is developed under the [BSD 3-Clause License](./LICENSE).
