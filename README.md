@@ -40,4 +40,4 @@ To guarantee a welcoming and friendly community, we require all community member
 
 ## License
 
-jupyterlab-conda-store is developed under the [BSD-3 LICENSED](./LICENSE).
+jupyterlab-conda-store is developed under the [BSD 3-Clause License](./LICENSE).
