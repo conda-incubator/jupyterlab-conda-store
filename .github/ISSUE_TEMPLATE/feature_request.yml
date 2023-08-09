@@ -1,15 +1,14 @@
 name: "Feature request"
 description: "Create a feature request to help us improve"
 title: "[ENH] - <title>"
-#labels: [] //TODO: Add labels once the repo has them
+labels: ["type: enhancement 💅"]
 
 body:
   - type: markdown
     attributes:
       value: |
         # Welcome 👋
-
-        Thanks for using the JupyterLab Conda Store extension and taking some time to contribute to this project.
+        Thanks for using conda-store and taking some time to contribute to this project.
   - type: textarea
     attributes:
       label: Feature description
