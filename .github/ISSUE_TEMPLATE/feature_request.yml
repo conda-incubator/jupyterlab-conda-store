@@ -8,6 +8,7 @@ body:
     attributes:
       value: |
         # Welcome 👋
+
         Thanks for using conda-store and taking some time to contribute to this project.
   - type: textarea
     attributes:

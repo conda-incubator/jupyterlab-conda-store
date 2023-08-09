@@ -15,7 +15,7 @@ This pull request:
 <!-- Quick checklist to ensure high-quality Pull Request. -->
 
 - [ ] Did you test this change locally?
-- [ ] Did you update the documentation (if required)?
+- [ ] Did you update the documentaion (if required)?
 - [ ] Did you add/update relevant tests for this change (if required)?
 
 ## Additional information
