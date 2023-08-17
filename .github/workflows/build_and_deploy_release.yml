@@ -5,9 +5,6 @@ on:
   push:
     tags:        
       - 'v*'          
-permissions:
-  id-token: write
-
 jobs:
   call-build:
     uses: conda-incubator/jupyterlab-conda-store/.github/workflows/build.yml@main
@@ -16,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     if: always() # Runs despite playwright tests failing
     needs: call-build
+    permissions:
+      id-token: write
 
     steps:
     - name: Checkout
