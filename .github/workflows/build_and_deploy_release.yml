@@ -6,7 +6,6 @@ on:
     tags:        
       - 'v*'          
 jobs:
-
   call-build:
     uses: conda-incubator/jupyterlab-conda-store/.github/workflows/build.yml@main
 
@@ -14,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     if: always() # Runs despite playwright tests failing
     needs: call-build
+    permissions:
+      id-token: write
 
     steps:
     - name: Checkout
@@ -25,14 +26,5 @@ jobs:
         name: extension-artifacts
         path: dist/
       
-    - name: Upload to pypi
-      run: |
-        set -eux
-        pip install twine
-        twine upload -r pypi dist/*
-      env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD:  ${{ secrets.PYPI_PASSWORD }}
-       
-      
-        
+    - name: Upload to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1        
