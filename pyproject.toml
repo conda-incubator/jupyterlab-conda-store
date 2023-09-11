@@ -5,14 +5,12 @@ build-backend = "hatchling.build"
 [project]
 name = "jupyterlab-conda-store"
 version = "0.2.7"
-description = "A jupyterlab extension that provides a beautiful, user-friendly graphical interface for building and managing environments using ayour existing conda-store server"
+description = "A JupyterLab extension that provides a user-friendly graphical interface for building and managing environments using an existing conda-store server"
 readme = "README.md"
 license = { file = "LICENSE" }
-requires-python = ">=3.7"
-authors = [
-    { name = "telamonian", email = "me@test.com" },
-]
-keywords = ["Jupyter", "JupyterLab", "JupyterLab3"]
+requires-python = ">=3.8"
+maintainers = [{name = "Tania Allard", email = "trallard@bitsandchips.me"}]
+keywords = ["Jupyter", "JupyterLab", "JupyterLab3", "conda", "environments"]
 classifiers = [
     "Framework :: Jupyter",
     "Framework :: Jupyter :: JupyterLab",
@@ -22,7 +20,6 @@ classifiers = [
     "License :: OSI Approved :: BSD License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
@@ -41,6 +38,7 @@ test = [
 
 [project.urls]
 Homepage = "https://github.com/conda-incubator/jupyterlab-conda-store"
+Repository = "https://github.com/conda-incubator/jupyterlab-conda-store"
 
 [tool.hatch.build]
 artifacts = ["jupyterlab_conda_store/labextension"]
