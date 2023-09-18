@@ -1,14 +1,14 @@
-# conda-store jupyterlab extension
+# conda-store JupyterLab extension
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/conda-incubator/jupyterlab-conda-store/build.yml?label=Build%20Workflow&logo=GitHub&style=for-the-badge)
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/conda-incubator/jupyterlab-conda-store/build_and_deploy_release.yml?label=Deploy%20Workflow&logo=GitHub&style=for-the-badge)
 
-A jupyterlab extension that provides a beautiful, user-friendly graphical interface for building and managing environments using an instance of [conda-store](https://github.com/conda-incubator/conda-store).
+A JupyterLab extension that provides a user-friendly graphical interface for building and managing environments using an instance of [conda-store](https://github.com/conda-incubator/conda-store).
 
 ## Requirements
 
-- JupyterLab >= 3.0
+- `JupyterLab >= 3.0`
 
 ## Install
 
@@ -106,11 +106,11 @@ jupyter lab
 
 ## Release
 
-To create a new pacakge and release:
+To create a new package and release:
 
 1. Bump the version as indicated in `pyproject.toml` and `package.json`
 
-2. Create a new release, and then enusre the release tag is the same as the bumped version tag.
+2. Create a new release, and then ensure the release tag is the same as the bumped version tag.
 
 ## Code of Conduct
 
