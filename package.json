@@ -55,7 +55,7 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
-    "@conda-store/conda-store-ui": "0.1.5",
+    "@conda-store/conda-store-ui": "2023.9.3",
     "@jupyterlab/application": "^3.1.0",
     "@jupyterlab/apputils": "^3.1.0",
     "@jupyterlab/mainmenu": "^3.1.0",
