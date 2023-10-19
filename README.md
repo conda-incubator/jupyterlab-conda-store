@@ -108,8 +108,7 @@ jupyter lab
 
 To create a new package and release:
 
-1. Bump the version as indicated in `pyproject.toml` and `package.json`
-
+1. Bump the version in `pyproject.toml` and `package.json`
 2. Create a new release, and then ensure the release tag is the same as the bumped version tag.
 
 ## Code of Conduct
