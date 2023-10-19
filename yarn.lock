@@ -1065,10 +1065,10 @@
     style-mod "^4.0.0"
     w3c-keyname "^2.2.4"
 
-"@conda-store/conda-store-ui@2023.10.1":
-  version "2023.10.1"
-  resolved "https://registry.yarnpkg.com/@conda-store/conda-store-ui/-/conda-store-ui-2023.10.1.tgz#f716c4d4bef2736cf34c722a84c4b0b6a697b53f"
-  integrity sha512-sC+Bo0s2M7CjQJ6+D4UyYKwX3tMKXHGqSiFForUyjIv1WnCrPylx5sE82QfUyUTMm5qLkk+C1u5xPCIfLVC63A==
+"@conda-store/conda-store-ui@2023.10.2":
+  version "2023.10.2"
+  resolved "https://registry.yarnpkg.com/@conda-store/conda-store-ui/-/conda-store-ui-2023.10.2.tgz#4ffb45937da605b1ac2061721560e3ec83538d95"
+  integrity sha512-ppS47RBcVcP3DJRklu0QsEpX/TA6qwlL4u/JaSOmqAWqLT5pOeFFK5LVye4b0BPgZvIvqsEd8DWvsfM6RefSkA==
   dependencies:
     "@codemirror/language" "^6.2.1"
     "@codemirror/legacy-modes" "^6.1.0"
