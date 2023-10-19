@@ -12,80 +12,81 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: 'Checkout repository 🛎'
+        uses: actions/checkout@v4
 
-    - name: Base Setup
-      uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
+      - name: 'Base Setup 🛠'
+        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
-    - name: Install dependencies
-      run: python -m pip install -U jupyterlab~=3.1
+      - name: 'Install dependencies 📦'
+        run: python -m pip install -U jupyterlab~=3.1
 
-    - name: Lint the extension
-      run: |
-        set -eux
-        jlpm
-        jlpm run lint:check
-    
-    - name: Test the extension
-      run: |
-        set -eux
-        jlpm run test --passWithNoTests
+      - name: 'Lint the extension 🧹'
+        run: |
+          set -eux
+          jlpm
+          jlpm run lint:check
 
-    - name: Build the extension
-      run: |
-        set -eux
-        python -m pip install .[test]
+      - name: 'Test the extension 🧪'
+        run: |
+          set -eux
+          jlpm run test --passWithNoTests
 
-        jupyter labextension list
-        jupyter labextension list 2>&1 | grep -ie "jupyterlab-conda-store.*OK"
-        python -m jupyterlab.browser_check
+      - name: 'Build the extension 🏗'
+        run: |
+          set -eux
+          python -m pip install .
 
-    - name: Package the extension
-      run: |
-        set -eux
+          jupyter labextension list
+          jupyter labextension list 2>&1 | grep -ie "jupyterlab-conda-store.*OK"
+          python -m jupyterlab.browser_check
 
-        pip install build
-        python -m build
+      - name: 'Package the extension 📦'
+        run: |
+          set -eux
 
-    - name: Upload extension packages
-      uses: actions/upload-artifact@v3
-      with:
-        name: extension-artifacts
-        path: dist/
-        if-no-files-found: error
+          pip install build
+          python -m build
+
+      - name: 'Upload extension packages 📤'
+        uses: actions/upload-artifact@v3
+        with:
+          name: extension-artifacts
+          path: dist/
+          if-no-files-found: error
 
   test_isolated:
     needs: build
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: 'Checkout repository 🛎'
+        uses: actions/checkout@v4
 
-    - name: Install Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
-        architecture: 'x64'
+      - name: 'Install Python 🐍'
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          architecture: 'x64'
 
-    - uses: actions/download-artifact@v3
-      with:
-        name: extension-artifacts
+      - name: 'Download extension packages 📤'
+        uses: actions/download-artifact@v3
+        with:
+          name: extension-artifacts
 
-    - name: Install and Test
-      run: |
-        set -eux
-        # Remove NodeJS, twice to take care of system and locally installed node versions.
-        sudo rm -rf $(which node)
-        sudo rm -rf $(which node)
+      - name: 'Install and Test 🧪'
+        run: |
+          set -eux
+          # Remove NodeJS, twice to take care of system and locally installed node versions.
+          sudo rm -rf $(which node)
+          sudo rm -rf $(which node)
 
-        pip install "jupyterlab~=3.1" jupyterlab_conda_store*.whl
+          pip install "jupyterlab~=3.1" jupyterlab_conda_store*.whl
 
 
-        jupyter labextension list
-        jupyter labextension list 2>&1 | grep -ie "jupyterlab-conda-store.*OK"
-        python -m jupyterlab.browser_check --no-chrome-test
+          jupyter labextension list
+          jupyter labextension list 2>&1 | grep -ie "jupyterlab-conda-store.*OK"
+          python -m jupyterlab.browser_check --no-chrome-test
 
   integration-tests:
     name: Integration tests
@@ -96,38 +97,38 @@ jobs:
       PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/pw-browsers
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: 'Checkout repository 🛎'
+        uses: actions/checkout@v4
 
-    - name: Base Setup
-      uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
+      - name: 'Base Setup'
+        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
-    - name: Download extension package
-      uses: actions/download-artifact@v3
-      with:
-        name: extension-artifacts
-        
-    - name: Install the extension
-      run: |
-        set -eux
-        python -m pip install "jupyterlab~=3.1" jupyterlab_conda_store*.whl
+      - name: 'Download extension packages 📤'
+        uses: actions/download-artifact@v3
+        with:
+          name: extension-artifacts
 
-    - name: Install dependencies
-      working-directory: ui-tests
-      env:
-        PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-      run: jlpm install
+      - name: 'Install the extension'
+        run: |
+          set -eux
+          python -m pip install "jupyterlab~=3.1" jupyterlab_conda_store*.whl
 
-    - name: Set up browser cache
-      uses: actions/cache@v3
-      with:
-        path: |
-          ${{ github.workspace }}/pw-browsers
-        key: ${{ runner.os }}-${{ hashFiles('ui-tests/yarn.lock') }}
+      - name: 'Install dependencies'
+        working-directory: ui-tests
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+        run: jlpm install
 
-    - name: Install browser
-      run: jlpm playwright install chromium
-      working-directory: ui-tests
+      - name: 'Set up browser cache'
+        uses: actions/cache@v3
+        with:
+          path: |
+            ${{ github.workspace }}/pw-browsers
+          key: ${{ runner.os }}-${{ hashFiles('ui-tests/yarn.lock') }}
+
+      - name: 'Install browser'
+        run: jlpm playwright install chromium
+        working-directory: ui-tests
 
     # - name: Execute integration tests
     #   working-directory: ui-tests
