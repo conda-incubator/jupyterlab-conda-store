@@ -104,9 +104,9 @@ jobs:
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
     - name: 'Download extension packages 📤'
-    uses: actions/download-artifact@v3
-    with:
-      name: extension-artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: extension-artifacts
 
       - name: "Install the extension"
         run: |
