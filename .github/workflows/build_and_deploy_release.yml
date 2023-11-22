@@ -1,30 +1,57 @@
-name: Build and Deploy Release
+name: 'Build and maybe upload to PyPI'
 
 on:
-  workflow_dispatch:
+  release:
+    types: [published]
   push:
-    tags:        
-      - 'v*'          
-jobs:
-  call-build:
-    uses: conda-incubator/jupyterlab-conda-store/.github/workflows/build.yml@main
+    branches: [main]
+    tags: ['*']
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
-  deploy-build:
+env:
+  PYTHON_VERSION: 3.10
+  FORCE_COLOR: '1' # Make tools pretty.
+
+jobs:
+  # Always build & verify extension
+  build-extension:
+    name: Build and verify extension
     runs-on: ubuntu-latest
-    if: always() # Runs despite playwright tests failing
-    needs: call-build
-    permissions:
-      id-token: write
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: 'Checkout Repository 🛎'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: Download extension package
-      uses: actions/download-artifact@v3
-      with:
-        name: extension-artifacts
-        path: dist/
-      
-    - name: Upload to PyPI
-      uses: pypa/gh-action-pypi-publish@release/v1        
+      - name: 'Base Setup 🛠'
+        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
+
+      - name: 'Install dependencies 📦'
+        run: python -m pip install -U jupyterlab~=3.1
+
+      - name: 'Lint the extension 🧹'
+        run: |
+          set -eux
+          jlpm
+          jlpm run lint:check
+
+      - name: 'Test the extension 🧪'
+        run: |
+          set -eux
+          jlpm run test --passWithNoTests
+
+      - name: 'Install extension 🏗'
+        run: |
+          set -eux
+          python -m pip install .
+
+          jupyter labextension list
+          jupyter labextension list 2>&1 | grep -ie "jupyterlab-conda-store.*OK"
+          python -m jupyterlab.browser_check
+
+      - name: 'Package the extension 📦'
+        uses: hynek/build-and-inspect-python-package@v1

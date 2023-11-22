@@ -1,4 +1,4 @@
-name: Build
+name: 'Build extension'
 
 on:
   push:
@@ -7,7 +7,11 @@ on:
     branches: '*'
   workflow_call:
 
+env:
+  FORCE_COLOR: '1' # Make tools pretty.
+
 jobs:
+  # Always build & verify package.
   build:
     runs-on: ubuntu-latest
 
