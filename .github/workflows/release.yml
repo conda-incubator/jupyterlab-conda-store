@@ -31,7 +31,7 @@ jobs:
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
       - name: 'Install dependencies 📦'
-        run: python -m pip install -U jupyterlab<4.0
+        run: python -m pip install -U "jupyterlab<4"
 
       - name: 'Lint the extension 🧹'
         run: |
@@ -59,3 +59,56 @@ jobs:
           python -m pip install build twine
           python -m build
           twine check dist/*
+
+      - name: 'Upload extension packages 📤'
+        uses: actions/upload-artifact@v3
+        with:
+          name: jupyterlab-extension-package
+          path: dist/
+          if-no-files-found: error
+
+  #  Upload to Test PyPI on every push to main
+  release-test-PiPy:
+    name: 'Publish in-dev to test.pypi.org 📦'
+    environment: release-test-pipy
+    if: github.repository_owner == 'conda-incubator' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: build-extension
+    permissions:
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
+
+    steps:
+      - name: 'Download build artefacts 📥'
+        uses: actions/download-artifact@v3
+        with:
+          name: jupyterlab-extension-package
+          path: dist
+
+      - name: 'Upload package to Test PyPI 🚀'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          print-hash: true
+          verbose: true
+
+  release-pypi:
+    name: 'Publish released package to pypi.org'
+    environment: release-pypi
+    if: github.repository_owner == 'conda-incubator' && github.event_name == 'release' && startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    needs: build-extension
+    permissions:
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
+
+    steps:
+      - name: 'Download build artefacts 📥'
+        uses: actions/download-artifact@v3
+        with:
+          name: jupyterlab-extension-package
+          path: dist
+
+      - name: 'Upload to PyPI 🚀'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          print-hash: true
+          verbose: true
