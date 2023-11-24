@@ -13,18 +13,18 @@ All the Python packaging instructions in the `pyproject.toml` file to wrap your 
    pip install build twine hatch
    ```
 
-1. Bump the version in `package.json`
+2. Bump the version in `package.json`
 
-   > [!IMPORTANT]
-   > There is no need to update the version in `pyproject.toml` as it is automatically updated by `hatch` when generating the package.
+> [!IMPORTANT]
+> There is no need to update the version in `pyproject.toml` as it is automatically updated by `hatch` when generating the package.
 
-1. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
+3. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
 
    ```bash
    python -m build
    ```
 
-   > [!WARNING] > `python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
+`python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
 
 1. Check the package contents with
 
@@ -32,7 +32,7 @@ All the Python packaging instructions in the `pyproject.toml` file to wrap your 
    twine check dist/*
    ```
 
-1. Clean the local build files with `hatch clean`
+2. Clean the local build files with `hatch clean`
 
 > [!IMPORTANT]
 > The `release.yml` GitHub action will automatically publish the package to PyPI when a new GitHub release is published. Unless absolutely necessary, do not publish the package manually.
