@@ -7,35 +7,38 @@ Currently, the extension is only distributed as a Python package and [published 
 This extension can be distributed as Python packages.
 All the Python packaging instructions in the `pyproject.toml` file to wrap your extension in a Python package.
 
-1.  Before generating a package, you need to install the following packages:
+1. Before generating a package, you need to install the following packages:
 
-    ```bash
-    pip install build twine hatch
-    ```
+   ```bash
+   pip install build twine hatch
+   ```
 
-2.  Bump the version in `package.json`
+1. Bump the version in `package.json`
 
-    > **Important**
-    > There is no need to update the version in `pyproject.toml` as it is automatically updated by `hatch` when generating the package.
+   > [!IMPORTANT]
+   > There is no need to update the version in `pyproject.toml` as it is automatically updated by `hatch` when generating the package.
 
-3.  To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
+1. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
 
-    ```bash
-    python -m build
-    ```
+   ```bash
+   python -m build
+   ```
 
-    > **Warning** > `python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
+   > [!WARNING] > `python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
 
-4.  Check the package contents with
+1. Check the package contents with
 
-    ```bash
-    twine check dist/*
-    ```
+   ```bash
+   twine check dist/*
+   ```
 
-5.  Then to upload the package to PyPI, do:
+1. Clean the local build files with `hatch clean`
 
-    ```bash
-    twine upload dist/*
-    ```
+> [!IMPORTANT]
+> The `release.yml` GitHub action will automatically publish the package to PyPI when a new GitHub release is published. Unless absolutely necessary, do not publish the package manually.
 
-6.  Clean the local build files with `hatch clean`
+If for whatever reason you need to publish the package manually, you can do so with:
+
+```bash
+twine upload dist/*
+```
