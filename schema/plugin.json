@@ -10,7 +10,7 @@
       "type": "string",
       "title": "conda-store server url",
       "description": "the url (including port, if any) for your conda-store server. The conda-store server needs to already be running for the jupyterlab extension to work",
-      "default": "http://localhost:5000/conda-store/"
+      "default": "http://localhost:8080/conda-store/"
     },
     "authMethod": {
       "type": "string",
@@ -23,7 +23,7 @@
       "type": "string",
       "title": "conda-store login url",
       "description": "if using cookie-based authentication, the path to the login page. See the conda-store auth method option",
-      "default": "http://localhost:5000/conda-store/login?next="
+      "default": "http://localhost:8080/conda-store/login?next="
     },
     "authToken": {
       "type": "string",
