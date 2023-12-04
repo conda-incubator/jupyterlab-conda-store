@@ -6,9 +6,9 @@ Currently the pref pass-thru from the jupyterlab frontend to the underlying cond
 
 ```typescript
 const prefDefault: IPreferences = {
-  apiUrl: 'http://localhost:5000/conda-store/',
+  apiUrl: 'http://localhost:8080/conda-store/',
   authMethod: 'cookie',
-  loginUrl: 'http://localhost:5000/conda-store/login?next=',
+  loginUrl: 'http://localhost:8080/conda-store/login?next=',
   authToken: '',
   styleType: 'grayscale',
   showLoginIcon: true
