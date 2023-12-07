@@ -1,24 +1,38 @@
-# conda-store JupyterLab extension
+# jupyterlab-conda-store
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/conda-incubator/jupyterlab-conda-store/build.yml?label=Build%20Workflow&logo=GitHub&style=for-the-badge)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/conda-incubator/conda-store/main/docs/_static/images/conda-store-logo-vertical-lockup.svg" alt="conda-store logo" width="30%">
+</div>
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/conda-incubator/jupyterlab-conda-store/build_and_deploy_release.yml?label=Deploy%20Workflow&logo=GitHub&style=for-the-badge)
+---
 
-A JupyterLab extension that provides a user-friendly graphical interface for building and managing environments using an instance of [conda-store](https://github.com/conda-incubator/conda-store).
+| Information | Links                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Project     | [![License](https://img.shields.io/badge/License-BSD%203--Clause-gray.svg?&colorB=298642&style=flat.svg)](https://opensource.org/licenses/BSD-3-Clause) [![conda-store documentation](https://img.shields.io/badge/conda--store-documentation%20📖-gray.svg?&colorB=298642&style=flat.svg)][conda-store-docs] [![conda-store-ui documentation](https://img.shields.io/badge/conda--store--UI-documentation%20📖-gray.svg?&colorB=298642&style=flat.svg)][conda-store-ui-docs] |
+| Wofklows    | [![Build extension](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/build.yml/badge.svg)](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/build.yml) [![Make PyPI release](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/release.yml/badge.svg)](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/release.yml)                                               |
+| Releases    | ![GitHub release (the latest by date)](https://img.shields.io/github/v/release/conda-incubator/jupyterlab-conda-store?logo=Github) ![PyPI releases](https://img.shields.io/pypi/v/jupyterlab-conda-store)                                                                                                                                                                                                                                                                     |
 
-## Requirements
+---
 
-- `JupyterLab >= 3.0`
+A JupyterLab extension for [conda-store][conda-store-repo].
 
-## Install
+> [!NOTE]
+> Currently, this extension is only compatible with JupyterLab `>= 3.0 <= 4.0`.
 
-To install the extension, execute:
+## Installation 📦
+
+### Pre-requisites
+
+You will need to have [conda-store][conda-store-repo] installed and running on your local computer to use this extension. As well as:
+
+- `JupyterLab >= 3.0 <= 4.0`
+- Python `>= 3.8`
+
+You can install the extension with pip:
 
 ```bash
 pip install jupyterlab-conda-store
 ```
-
-## Uninstall
 
 To remove the extension, execute:
 
@@ -26,16 +40,16 @@ To remove the extension, execute:
 pip uninstall jupyterlab-conda-store
 ```
 
-## Installing the development version
+## Installing the development version 🚀
 
 ### Pre-requisites
 
-1. You will need to have [NodeJS](https://nodejs.org/en/download/) installed on your local computer to build the extension package.
-2. Python >= 3.8 and `pip`.
+1. You will need to have [NodeJS `> 18`](https://nodejs.org/en/download/) installed on your local computer to build the extension package.
+2. Python `>= 3.8` and `pip`.
 
 ### Building and linking the extension
 
-> **Note**
+> [!NOTE]
 > The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use`yarn` or `npm` in lieu of `jlpm` in the commands below.
 
 1. Clone this repository to your local computer:
@@ -106,10 +120,13 @@ jupyter lab
 
 ## Release
 
-To create a new package and release:
+To create a jupyterlab-conda-store release:
 
-1. Bump the version in `pyproject.toml` and `package.json`
-2. Create a new release, and then ensure the release tag is the same as the bumped version tag.
+1. Open a `new_release` issue in the [repository][jupyterlab-conda-store-repo] and fill in the release details.
+2. Follow the steps in the new release checklist.
+
+> [!TIP]
+> Follow the steps in (RELEASE.md)[./RELEASE.md] to ensure all is working as expected.
 
 ## Code of Conduct
 
@@ -118,3 +135,10 @@ To guarantee a welcoming and friendly community, we require all community member
 ## License
 
 jupyterlab-conda-store is developed under the [BSD 3-Clause License](./LICENSE).
+
+<!-- reusable links -->
+
+[conda-store-docs]: https://conda.store/en/latest/
+[conda-store-ui-docs]: https://conda-incubator.github.io/conda-store-ui/?path=/story/welcome--page
+[conda-store-repo]: https://github.com/conda-incubator/conda-store
+[jupyterlab-conda-store-repo]: https://github.com/conda-incubator/jupyterlab-conda-store

@@ -1,0 +1,114 @@
+name: 'Build and maybe upload to PyPI'
+
+on:
+  release:
+    types: [published]
+  push:
+    branches: [main]
+    tags: ['*']
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: 3.10
+  FORCE_COLOR: '1' # Make tools pretty.
+
+jobs:
+  # Always build & verify extension
+  build-extension:
+    name: Build and verify extension
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout Repository 🛎'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 'Base Setup 🛠'
+        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
+
+      - name: 'Install dependencies 📦'
+        run: python -m pip install -U "jupyterlab<4"
+
+      - name: 'Lint the extension 🧹'
+        run: |
+          set -eux
+          jlpm
+          jlpm run lint:check
+
+      - name: 'Test the extension 🧪'
+        run: |
+          set -eux
+          jlpm run test --passWithNoTests
+
+      - name: 'Install extension 🏗'
+        run: |
+          set -eux
+          python -m pip install .
+
+          jupyter labextension list
+          jupyter labextension list 2>&1 | grep -ie "jupyterlab-conda-store.*OK"
+          python -m jupyterlab.browser_check
+
+      - name: 'Package the extension 📦'
+        run: |
+          set -eux
+          python -m pip install build twine
+          python -m build
+          twine check dist/*
+
+      - name: 'Upload extension packages 📤'
+        uses: actions/upload-artifact@v3
+        with:
+          name: jupyterlab-extension-package
+          path: dist/
+          if-no-files-found: error
+
+  #  Upload to Test PyPI on every push to main
+  release-test-PiPy:
+    name: 'Publish in-dev to test.pypi.org 📦'
+    environment: release-test-pipy
+    if: github.repository_owner == 'conda-incubator' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: build-extension
+    permissions:
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
+
+    steps:
+      - name: 'Download build artefacts 📥'
+        uses: actions/download-artifact@v3
+        with:
+          name: jupyterlab-extension-package
+          path: dist
+
+      - name: 'Upload package to Test PyPI 🚀'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          print-hash: true
+          verbose: true
+
+  release-pypi:
+    name: 'Publish released package to pypi.org'
+    environment: release-pypi
+    if: github.repository_owner == 'conda-incubator' && github.event_name == 'release' && startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    needs: build-extension
+    permissions:
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
+
+    steps:
+      - name: 'Download build artefacts 📥'
+        uses: actions/download-artifact@v3
+        with:
+          name: jupyterlab-extension-package
+          path: dist
+
+      - name: 'Upload to PyPI 🚀'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          print-hash: true
+          verbose: true
