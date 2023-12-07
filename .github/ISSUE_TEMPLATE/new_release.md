@@ -1,6 +1,6 @@
 ---
 name: 'New release 🏷 [maintainers only]'
-about: 'Start a new conda-store release'
+about: 'Start a new jupyterlab-conda-store release'
 title: '[REL] - <release number>'
 labels: ['release 🏷']
 ---
