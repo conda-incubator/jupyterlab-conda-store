@@ -2,7 +2,7 @@ name: 'Build extension'
 
 on:
   push:
-    branches: main
+    branches: "*"
   pull_request:
     branches: '*'
   workflow_call:
@@ -86,7 +86,6 @@ jobs:
           sudo rm -rf $(which node)
 
           pip install "jupyterlab~=4.0.9" jupyterlab_conda_store*.whl
-
 
           jupyter labextension list
           jupyter labextension list 2>&1 | grep -ie "jupyterlab-conda-store.*OK"
