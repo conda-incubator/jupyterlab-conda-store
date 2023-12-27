@@ -17,7 +17,7 @@ test('should emit an activation console message', async ({ page }) => {
 
   expect(
     logs.filter(
-      s => s === 'JupyterLab extension jupyterlab-conda-store is activated!'
+      s => s === 'JupyterLab extension conda-store is activated!'
     )
   ).toHaveLength(1);
 });

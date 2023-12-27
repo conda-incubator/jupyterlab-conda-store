@@ -30,6 +30,9 @@
     "type": "git",
     "url": "https://github.com/telamonian/jupyterlab-conda-store.git"
   },
+  "workspaces": [
+    "ui-tests"
+  ],
   "scripts": {
     "build": "jlpm build:lib && jlpm build:labextension:dev",
     "build:prod": "jlpm clean && jlpm build:lib && jlpm build:labextension",
