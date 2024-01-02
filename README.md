@@ -76,7 +76,7 @@ pip uninstall jupyterlab-conda-store
 
    ```bash
    # Install node and jupyterlab from conda-forge
-   conda install -c conda-forge 'nodejs>16' 'jupyterlab<4'
+   conda install -c conda-forge 'nodejs>16' 'jupyterlab>=4'
    ```
 
 5. Install the package in development mode:
