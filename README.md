@@ -1,7 +1,7 @@
 # jupyterlab-conda-store
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/conda-incubator/conda-store/main/docusaurus-docs/community/images/logos/conda-store-logo-vertical-lockup.svg" alt="conda-store logo" width="30%">
+  <img src="https://raw.githubusercontent.com/conda-incubator/conda-store/main/docusaurus-docs/community/assets/logos/conda-store-logo-vertical-lockup.svg" alt="conda-store logo" width="30%">
 </div>
 
 ---
