@@ -36,10 +36,6 @@ jobs:
           set -eux
           jlpm run test --passWithNoTests
 
-      - name: Debugging with tmate
-        uses: mxschmitt/action-tmate@v3.17
-
-
       - name: 'Build the extension 🏗'
         run: |
           set -eux
