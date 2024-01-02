@@ -2,7 +2,7 @@ name: 'Build extension'
 
 on:
   push:
-    branches: "*"
+    branches: main
   pull_request:
     branches: '*'
   workflow_call:
