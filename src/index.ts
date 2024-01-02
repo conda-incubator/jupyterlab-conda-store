@@ -78,7 +78,7 @@ async function activate(
         command,
         args: {}
       });
-      mainMenu.addMenu(condaStoreMenu, { rank: 1000 });
+      mainMenu.addMenu(condaStoreMenu, true, { rank: 1000 });
     } else {
       mainMenu.settingsMenu.addGroup([{ command }], 900);
     }
