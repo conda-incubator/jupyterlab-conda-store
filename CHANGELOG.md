@@ -17,4 +17,3 @@
 ([GitHub contributors page for this release](https://github.com/conda-incubator/jupyterlab-conda-store/graphs/contributors?from=2023-10-19&to=2024-01-30&type=c))
 
 [@isumitjha](https://github.com/search?q=repo%3Aconda-incubator%2Fjupyterlab-conda-store+involves%3Aisumitjha+updated%3A2023-10-19..2024-01-30&type=Issues) | [@nkaretnikov](https://github.com/search?q=repo%3Aconda-incubator%2Fjupyterlab-conda-store+involves%3Ankaretnikov+updated%3A2023-10-19..2024-01-30&type=Issues) | [@pavithraes](https://github.com/search?q=repo%3Aconda-incubator%2Fjupyterlab-conda-store+involves%3Apavithraes+updated%3A2023-10-19..2024-01-30&type=Issues) | [@trallard](https://github.com/search?q=repo%3Aconda-incubator%2Fjupyterlab-conda-store+involves%3Atrallard+updated%3A2023-10-19..2024-01-30&type=Issues)
-

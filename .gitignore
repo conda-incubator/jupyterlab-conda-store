@@ -141,3 +141,8 @@ dmypy.json
 
 # vim stuff
 *.swp
+
+#  eslint cache
+.eslintcache
+# stylelint cache
+.stylelintcache
