@@ -126,7 +126,7 @@ To create a jupyterlab-conda-store release:
 2. Follow the steps in the new release checklist.
 
 > [!TIP]
-> Follow the steps in (RELEASE.md)[./RELEASE.md] to ensure all is working as expected.
+> Follow the steps in [RELEASE.md](./RELEASE.md) to ensure all is working as expected.
 
 ## Code of Conduct 🤝
 
