@@ -1,7 +1,7 @@
 Fixes # .
 
 <!-- Reference the issue corresponding to this PR. If an issue does not exist,
-consider opening one or writing a detailed description of what this PR changes 
+consider opening one or writing a detailed description of what this PR changes
 and its value in the following sections. -->
 <!-- GitHub Docs on Keywords: https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests -->
 
