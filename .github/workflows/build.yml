@@ -23,7 +23,7 @@ jobs:
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
       - name: 'Install dependencies 📦'
-        run: python -m pip install -U jupyterlab~=3.1
+        run: python -m pip install -U "jupyterlab<4"
 
       - name: 'Lint the extension 🧹'
         run: |
@@ -68,7 +68,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 'Install Python 🐍'
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'
           architecture: 'x64'
@@ -85,7 +85,7 @@ jobs:
           sudo rm -rf $(which node)
           sudo rm -rf $(which node)
 
-          pip install "jupyterlab~=3.1" jupyterlab_conda_store*.whl
+          pip install "jupyterlab<4" jupyterlab_conda_store*.whl
 
 
           jupyter labextension list
@@ -124,7 +124,7 @@ jobs:
         run: jlpm install
 
       - name: 'Set up browser cache'
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ${{ github.workspace }}/pw-browsers
