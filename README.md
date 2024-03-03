@@ -17,7 +17,7 @@
 A JupyterLab extension for [conda-store][conda-store-repo].
 
 > [!NOTE]
-> Currently, this extension is only compatible with JupyterLab `>= 3.0 <= 4.0`.
+> This extension is only compatible with JupyterLab `>= 4.0`.
 
 ## Installation 📦
 
@@ -25,7 +25,7 @@ A JupyterLab extension for [conda-store][conda-store-repo].
 
 You will need to have [conda-store][conda-store-repo] installed and running on your local computer to use this extension. As well as:
 
-- `JupyterLab >= 3.0 <= 4.0`
+- `JupyterLab >= 4.0`
 - Python `>= 3.8`
 
 You can install the extension with pip:
