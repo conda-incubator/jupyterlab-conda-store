@@ -85,7 +85,7 @@ jobs:
           sudo rm -rf $(which node)
           sudo rm -rf $(which node)
 
-          pip install "jupyterlab~=4.0.9" jupyterlab_conda_store*.whl
+          pip install "jupyterlab>4" jupyterlab_conda_store*.whl
           jupyter labextension list
           jupyter labextension list 2>&1 | grep -ie "jupyterlab-conda-store.*OK"
           python -m jupyterlab.browser_check --no-chrome-test
@@ -113,7 +113,7 @@ jobs:
       - name: 'Install the extension'
         run: |
           set -eux
-          python -m pip install "jupyterlab~=4.0.9" jupyterlab_conda_store*.whl
+          python -m pip install "jupyterlab>4" jupyterlab_conda_store*.whl
 
       - name: 'Install dependencies'
         working-directory: ui-tests
