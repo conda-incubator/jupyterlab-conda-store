@@ -144,3 +144,7 @@ dmypy.json
 
 # frontend stuff
 .yarn/
+#  eslint cache
+.eslintcache
+# stylelint cache
+.stylelintcache

@@ -9,7 +9,7 @@
 | Information | Links                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Project     | [![License](https://img.shields.io/badge/License-BSD%203--Clause-gray.svg?&colorB=298642&style=flat.svg)](https://opensource.org/licenses/BSD-3-Clause) [![conda-store documentation](https://img.shields.io/badge/conda--store-documentation%20📖-gray.svg?&colorB=298642&style=flat.svg)][conda-store-docs] [![conda-store-ui documentation](https://img.shields.io/badge/conda--store--UI-documentation%20📖-gray.svg?&colorB=298642&style=flat.svg)][conda-store-ui-docs] |
-| Wofklows    | [![Build extension](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/build.yml/badge.svg)](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/build.yml) [![Make PyPI release](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/release.yml/badge.svg)](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/release.yml)                                               |
+| Workflows   | [![Build extension](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/build.yml/badge.svg)](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/build.yml) [![Make PyPI release](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/release.yml/badge.svg)](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/release.yml)                                               |
 | Releases    | ![GitHub release (the latest by date)](https://img.shields.io/github/v/release/conda-incubator/jupyterlab-conda-store?logo=Github) ![PyPI releases](https://img.shields.io/pypi/v/jupyterlab-conda-store)                                                                                                                                                                                                                                                                     |
 
 ---
@@ -126,13 +126,13 @@ To create a jupyterlab-conda-store release:
 2. Follow the steps in the new release checklist.
 
 > [!TIP]
-> Follow the steps in (RELEASE.md)[./RELEASE.md] to ensure all is working as expected.
+> Follow the steps in [RELEASE.md](./RELEASE.md) to ensure all is working as expected.
 
-## Code of Conduct
+## Code of Conduct 🤝
 
 To guarantee a welcoming and friendly community, we require all community members to follow our [Code of Conduct](https://github.com/conda-incubator/governance/blob/main/CODE_OF_CONDUCT.md).
 
-## License
+## License 📃
 
 jupyterlab-conda-store is developed under the [BSD 3-Clause License](./LICENSE).
 

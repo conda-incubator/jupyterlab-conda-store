@@ -1,6 +1,8 @@
 Fixes # .
 
-<!-- Reference the issue corresponding to this PR. If an issues does not exist, consider opening one or writing a detailed description for what this PR changes and it's value in the following sections. -->
+<!-- Reference the issue corresponding to this PR. If an issue does not exist,
+consider opening one or writing a detailed description of what this PR changes
+and its value in the following sections. -->
 <!-- GitHub Docs on Keywords: https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests -->
 
 ## Description
@@ -24,3 +26,7 @@ This pull request:
 ## Additional information
 
 <!-- Do you have any other information about this pull request? This may include screenshots, references, and/or implementation notes. -->
+
+## How to test
+
+<!-- Please add any relevant details to test this functionality even if you added automated tests -->
