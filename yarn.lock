@@ -1522,8 +1522,8 @@ __metadata:
   linkType: hard
 
 "@codemirror/lang-sql@npm:^6.4.1":
-  version: 6.6.0
-  resolution: "@codemirror/lang-sql@npm:6.6.0"
+  version: 6.6.1
+  resolution: "@codemirror/lang-sql@npm:6.6.1"
   dependencies:
     "@codemirror/autocomplete": ^6.0.0
     "@codemirror/language": ^6.0.0
@@ -1531,7 +1531,7 @@ __metadata:
     "@lezer/common": ^1.2.0
     "@lezer/highlight": ^1.0.0
     "@lezer/lr": ^1.0.0
-  checksum: d2f869e4d062cbd4c22105ea697349ce6f62fed1c170e6f6a68219d20a10e88ebea9df9081597a2e55f554748fb185263e97a340845f033707b50ebabd1cf181
+  checksum: 65f59b2a4477ddff27aba9435f4c3f1d236cbc03aa7c9cf3b2f70b8bbcd748c8883aae249efd9077fdbd9b23a9c0f046a29c945ffb0d8e6ef4e9ee9f61d35a88
   languageName: node
   linkType: hard
 
@@ -1625,13 +1625,13 @@ __metadata:
   linkType: hard
 
 "@codemirror/view@npm:^6.0.0, @codemirror/view@npm:^6.17.0, @codemirror/view@npm:^6.23.0, @codemirror/view@npm:^6.9.6":
-  version: 6.24.1
-  resolution: "@codemirror/view@npm:6.24.1"
+  version: 6.25.0
+  resolution: "@codemirror/view@npm:6.25.0"
   dependencies:
     "@codemirror/state": ^6.4.0
     style-mod: ^4.1.0
     w3c-keyname: ^2.2.4
-  checksum: 376a9dd6ba3d626373f06a241defa7b61dfa80dda021e8dac8aa05261873b5e8bdf2f7d378f844c8bea2b644659020729bbf43330a272a76143e9995d77a452c
+  checksum: 5283cc5167fba2d905684c9b36e523b7c5bd12e70b497f0d55b2b63453f13a3eb858e0ce60c2eb97784c4202712da95a40b88a6495c632fd33b0fdab5360888f
   languageName: node
   linkType: hard
 
@@ -2301,25 +2301,25 @@ __metadata:
   linkType: hard
 
 "@jupyter/react-components@npm:^0.15.2":
-  version: 0.15.2
-  resolution: "@jupyter/react-components@npm:0.15.2"
+  version: 0.15.3
+  resolution: "@jupyter/react-components@npm:0.15.3"
   dependencies:
-    "@jupyter/web-components": ^0.15.2
+    "@jupyter/web-components": ^0.15.3
     "@microsoft/fast-react-wrapper": ^0.3.22
     react: ">=17.0.0 <19.0.0"
-  checksum: d6d339ff9c2fed1fd5afda612be500d73c4a83eee5470d50e94020dadd1e389a3bf745c7240b0a48edbc6d3fdacec93367b7b5e40588f2df588419caada705be
+  checksum: 1a6b256314259c6465c4b6d958575710536b82234a7bf0fba3e889a07e1f19ff8ab321450be354359876f92c45dbcc9d21a840237ff4a619806d9de696f55496
   languageName: node
   linkType: hard
 
-"@jupyter/web-components@npm:^0.15.2":
-  version: 0.15.2
-  resolution: "@jupyter/web-components@npm:0.15.2"
+"@jupyter/web-components@npm:^0.15.2, @jupyter/web-components@npm:^0.15.3":
+  version: 0.15.3
+  resolution: "@jupyter/web-components@npm:0.15.3"
   dependencies:
     "@microsoft/fast-colors": ^5.3.1
     "@microsoft/fast-element": ^1.12.0
     "@microsoft/fast-foundation": ^2.49.4
     "@microsoft/fast-web-utilities": ^5.4.1
-  checksum: f272ef91de08e28f9414a26dbd2388e1a8985c90f4ab00231978cee49bd5212f812411397a9038d298c8c0c4b41eb28cc86f1127bc7ace309bda8df60c4a87c8
+  checksum: a0980af934157bfdbdb6cc169c0816c1b2e57602d524c56bdcef746a4c25dfeb8f505150d83207c8695ed89b5486cf53d35a3382584d25ef64db666e4e16e45b
   languageName: node
   linkType: hard
 
@@ -3245,13 +3245,13 @@ __metadata:
   linkType: hard
 
 "@lezer/xml@npm:^1.0.0":
-  version: 1.0.4
-  resolution: "@lezer/xml@npm:1.0.4"
+  version: 1.0.5
+  resolution: "@lezer/xml@npm:1.0.5"
   dependencies:
     "@lezer/common": ^1.2.0
     "@lezer/highlight": ^1.0.0
     "@lezer/lr": ^1.0.0
-  checksum: 68a82085bff6c1525f4ef03cd9f9dac0132b3e03fe574e0289700dd4475056e40e8744cde15cf5ad6d3760d0d584ff85ce707e26a7c938d0c5fe2e325c1c336e
+  checksum: a0a077b9e455b03593b93a7fdff2a4eab2cb7b230c8e1b878a8bebe80184632b9cc75ca018f1f9e2acb3a26e1386f4777385ab6e87aea70ccf479cde5ca268ee
   languageName: node
   linkType: hard
 
@@ -4400,16 +4400,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17.0.0":
-  version: 17.0.25
-  resolution: "@types/react-dom@npm:17.0.25"
-  dependencies:
-    "@types/react": ^17
-  checksum: d1e582682478e0848c8d54ea3e89d02047bac6d916266b85ce63731b06987575919653ea7159d98fda47ade3362b8c4d5796831549564b83088e7aa9ce8b60ed
-  languageName: node
-  linkType: hard
-
-"@types/react-dom@npm:^18.0.0":
+"@types/react-dom@npm:^18.0.0, @types/react-dom@npm:^18.2.0":
   version: 18.2.19
   resolution: "@types/react-dom@npm:18.2.19"
   dependencies:
@@ -4439,7 +4430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.0.0, @types/react@npm:^18.0.26":
+"@types/react@npm:*, @types/react@npm:^18.0.0, @types/react@npm:^18.0.26, @types/react@npm:^18.2.0":
   version: 18.2.61
   resolution: "@types/react@npm:18.2.61"
   dependencies:
@@ -4447,17 +4438,6 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: a100c09bc0d6d1a0a42b3fa0944b71d209b5adea6515fc21109972ec3267185372cc416c0467b1998afce6b90fc80f4c0029b5d975afb0b3070d864c7a924a5e
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^17":
-  version: 17.0.76
-  resolution: "@types/react@npm:17.0.76"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: 2bee42fc8328b3e93281601e53d0f1e6e6a8826c3b2a41635432fc859839a614245486d9bf559e98695d658a72f71f97d487f46c06a6148cfc827c7c50876af0
   languageName: node
   linkType: hard
 
@@ -8772,8 +8752,8 @@ __metadata:
     "@jupyterlab/ui-components": ^4.0.9
     "@lumino/widgets": ^2.3.1
     "@types/jest": ^26.0.0
-    "@types/react": ^18.0.26
-    "@types/react-dom": ^17.0.0
+    "@types/react": ^18.2.0
+    "@types/react-dom": ^18.2.0
     "@typescript-eslint/eslint-plugin": ~6.13.2
     "@typescript-eslint/parser": ~6.13.2
     eslint: ~8.55.0
@@ -8782,8 +8762,8 @@ __metadata:
     jest: ^29.2.0
     npm-run-all: ^4.1.5
     prettier: ~3.0.0
-    react: ^17.0.1
-    react-dom: ^17.0.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
     rimraf: ^3.0.2
     stylelint: ^15.10.1
     stylelint-config-prettier: ^9.0.3
@@ -10104,19 +10084,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^17.0.1":
-  version: 17.0.2
-  resolution: "react-dom@npm:17.0.2"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-    scheduler: ^0.20.2
-  peerDependencies:
-    react: 17.0.2
-  checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
-  languageName: node
-  linkType: hard
-
 "react-dom@npm:^18.0.0, react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
@@ -10259,16 +10226,6 @@ __metadata:
   dependencies:
     loose-envify: ^1.1.0
   checksum: 88e38092da8839b830cda6feef2e8505dec8ace60579e46aa5490fc3dc9bba0bd50336507dc166f43e3afc1c42939c09fe33b25fae889d6f402721dcd78fca1b
-  languageName: node
-  linkType: hard
-
-"react@npm:^17.0.1":
-  version: 17.0.2
-  resolution: "react@npm:17.0.2"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
   languageName: node
   linkType: hard
 
@@ -10648,16 +10605,6 @@ __metadata:
   dependencies:
     xmlchars: ^2.2.0
   checksum: d3fa3e2aaf6c65ed52ee993aff1891fc47d5e47d515164b5449cbf5da2cbdc396137e55590472e64c5c436c14ae64a8a03c29b9e7389fc6f14035cf4e982ef3b
-  languageName: node
-  linkType: hard
-
-"scheduler@npm:^0.20.2":
-  version: 0.20.2
-  resolution: "scheduler@npm:0.20.2"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: c4b35cf967c8f0d3e65753252d0f260271f81a81e427241295c5a7b783abf4ea9e905f22f815ab66676f5313be0a25f47be582254db8f9241b259213e999b8fc
   languageName: node
   linkType: hard
 
