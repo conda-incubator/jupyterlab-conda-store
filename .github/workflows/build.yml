@@ -23,7 +23,7 @@ jobs:
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
       - name: 'Install dependencies 📦'
-        run: python -m pip install -U "jupyterlab<4"
+        run: python -m pip install -U jupyterlab>4
 
       - name: 'Lint the extension 🧹'
         run: |
@@ -85,9 +85,7 @@ jobs:
           sudo rm -rf $(which node)
           sudo rm -rf $(which node)
 
-          pip install "jupyterlab<4" jupyterlab_conda_store*.whl
-
-
+          pip install "jupyterlab>4" jupyterlab_conda_store*.whl
           jupyter labextension list
           jupyter labextension list 2>&1 | grep -ie "jupyterlab-conda-store.*OK"
           python -m jupyterlab.browser_check --no-chrome-test
@@ -115,7 +113,7 @@ jobs:
       - name: 'Install the extension'
         run: |
           set -eux
-          python -m pip install "jupyterlab~=3.1" jupyterlab_conda_store*.whl
+          python -m pip install "jupyterlab>4" jupyterlab_conda_store*.whl
 
       - name: 'Install dependencies'
         working-directory: ui-tests
@@ -134,16 +132,16 @@ jobs:
         run: jlpm playwright install chromium
         working-directory: ui-tests
 
-    # - name: Execute integration tests
-    #   working-directory: ui-tests
-    #   run: |
-    #     jlpm playwright test
+      - name: Execute integration tests
+        working-directory: ui-tests
+        run: |
+          jlpm playwright test
 
-    # - name: Upload Playwright Test report
-    #   if: always()
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: jupyterlab_conda_store-playwright-tests
-    #     path: |
-    #       ui-tests/test-results
-    #       ui-tests/playwright-report
+      - name: Upload Playwright Test report
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: jupyterlab_conda_store-playwright-tests
+          path: |
+            ui-tests/test-results
+            ui-tests/playwright-report

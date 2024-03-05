@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling", "jupyterlab<4", "hatch-nodejs-version"]
+requires = ["hatchling", "jupyterlab>4", "hatch-nodejs-version"]
 build-backend = "hatchling.build"
 
 [project]
@@ -9,11 +9,11 @@ readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
 maintainers = [{ name = "Tania Allard", email = "trallard@bitsandchips.me" }]
-keywords = ["Jupyter", "JupyterLab", "JupyterLab3", "conda", "environments"]
+keywords = ["Jupyter", "JupyterLab", "JupyterLab4", "conda", "environments"]
 classifiers = [
     "Framework :: Jupyter",
     "Framework :: Jupyter :: JupyterLab",
-    "Framework :: Jupyter :: JupyterLab :: 3",
+    "Framework :: Jupyter :: JupyterLab :: 4",
     "Framework :: Jupyter :: JupyterLab :: Extensions",
     "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
     "License :: OSI Approved :: BSD License",

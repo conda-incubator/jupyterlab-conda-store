@@ -142,6 +142,8 @@ dmypy.json
 # vim stuff
 *.swp
 
+# frontend stuff
+.yarn/
 #  eslint cache
 .eslintcache
 # stylelint cache
