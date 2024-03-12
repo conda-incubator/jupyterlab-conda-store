@@ -96,6 +96,9 @@
     "ts-jest": "^29.1.1",
     "typescript": "~5.0.2"
   },
+  "resolutions": {
+    "@types/react": "~18.2.21"
+  },
   "sideEffects": [
     "style/*.css",
     "style/index.js"
