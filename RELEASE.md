@@ -18,7 +18,13 @@ All the Python packaging instructions in the `pyproject.toml` file to wrap your 
 > [!IMPORTANT]
 > There is no need to update the version in `pyproject.toml` as it is automatically updated by `hatch` when generating the package.
 
-3. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
+3. Optional - if there is a newer release of `conda-store-ui`, update the `conda-store-ui` dependency in the package.json file.
+
+   ```bash
+   yarn upgrade @conda-store/conda-store-ui@<version>
+   ```
+
+4. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
 
    ```bash
    python -m build
@@ -26,13 +32,13 @@ All the Python packaging instructions in the `pyproject.toml` file to wrap your 
 
 `python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
 
-1. Check the package contents with
+5. Check the package contents with
 
    ```bash
    twine check dist/*
    ```
 
-2. Clean the local build files with `hatch clean`
+6. Clean the local build files with `hatch clean`
 
 > [!IMPORTANT]
 > The `release.yml` GitHub action will automatically publish the package to PyPI when a new GitHub release is published. Unless absolutely necessary, do not publish the package manually.
