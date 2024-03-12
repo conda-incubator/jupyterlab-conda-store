@@ -22,7 +22,7 @@ All the Python packaging instructions in the `pyproject.toml` file to wrap your 
 
    ```bash
    yarn upgrade @conda-store/conda-store-ui@<version>
-   ````
+   ```
 
 4. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
 
