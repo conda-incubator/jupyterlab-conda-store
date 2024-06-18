@@ -1,5 +1,21 @@
 # Changelog
 
+# 2024.6.1...master@{2024-06-18}
+
+([full changelog] https://github.com/conda-incubator/jupyterlab-conda-store/compare/2024.1.1...2024.6.1)
+
+## Merged PRs
+
+- MAINT - Upgrade GH actions by @trallard in https://github.com/conda-incubator/jupyterlab-conda-store/pull/38
+- ENH - Add support for JupyterLab `4.x` by @isumitjha in https://github.com/conda-incubator/jupyterlab-conda-store/pull/34
+- BUG - Fix lockfile, fix `.yarnrc.yml` setting by @krassowski in https://github.com/conda-incubator/jupyterlab-conda-store/pull/44
+- MAINT - Pin `@types/react` to a working version, deduplicate lock file by @krassowski in https://github.com/conda-incubator/jupyterlab-conda-store/pull/46
+- MAINT - Pre-release updates by @trallard in https://github.com/conda-incubator/jupyterlab-conda-store/pull/43
+
+## New Contributors
+
+- @krassowski made their first contribution in https://github.com/conda-incubator/jupyterlab-conda-store/pull/44
+
 # 2024.1.1...master@{2024-03-12}
 
 ([full changelog](https://github.com/conda-incubator/jupyterlab-conda-store/compare/2024.1.1...9f72cd9f16c8c091a80964d635ce5327909c2949))
