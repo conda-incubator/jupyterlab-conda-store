@@ -6,3 +6,7 @@ tests
 
 **/__tests__
 ui-tests
+
+# Ignore files for NPM and YARN
+package-lock.json
+yarn.lock
