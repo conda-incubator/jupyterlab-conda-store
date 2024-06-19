@@ -3,3 +3,7 @@ node_modules
 **/lib
 **/package.json
 jupyterlab_conda_store
+
+# Ignore files for NPM and YARN
+package-lock.json
+yarn.lock
