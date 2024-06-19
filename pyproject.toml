@@ -7,7 +7,7 @@ name = "jupyterlab-conda-store"
 description = "A JupyterLab extension that provides a user-friendly graphical interface for building and managing environments using an existing conda-store server"
 readme = "README.md"
 license = { file = "LICENSE" }
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 maintainers = [{ name = "Tania Allard", email = "trallard@bitsandchips.me" }]
 keywords = ["Jupyter", "JupyterLab", "JupyterLab4", "conda", "environments"]
 classifiers = [

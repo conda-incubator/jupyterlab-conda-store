@@ -45,7 +45,7 @@ pip uninstall jupyterlab-conda-store
 ### Pre-requisites
 
 1. You will need to have [NodeJS `> 18`](https://nodejs.org/en/download/) installed on your local computer to build the extension package.
-2. Python `>= 3.8` and `pip`.
+2. Python `>= 3.9` and `pip`.
 
 ### Building and linking the extension
 
