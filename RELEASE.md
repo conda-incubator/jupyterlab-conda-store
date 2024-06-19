@@ -18,7 +18,7 @@ All the Python packaging instructions in the `pyproject.toml` file to wrap your 
 > [!IMPORTANT]
 > There is no need to update the version in `pyproject.toml` as it is automatically updated by `hatch` when generating the package.
 
-3. Optional - if there is a newer release of `conda-store-ui`, update the `conda-store-ui` dependency in the package.json file.
+3. Optional - if there is a newer release of `conda-store-ui`, update the `conda-store-ui` dependency in the `package.json` file.
 
    ```bash
    yarn upgrade @conda-store/conda-store-ui@<version>
@@ -27,7 +27,7 @@ All the Python packaging instructions in the `pyproject.toml` file to wrap your 
 4. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
 
    ```bash
-   python -m build
+   hatch build
    ```
 
 `python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
