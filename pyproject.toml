@@ -37,6 +37,7 @@ test = [
     "pytest-cov",
     "pytest-tornasync"
 ]
+dev = ["hatch"]
 
 [project.urls]
 Homepage = "https://github.com/conda-incubator/jupyterlab-conda-store"
