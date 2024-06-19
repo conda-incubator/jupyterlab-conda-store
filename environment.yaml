@@ -1,0 +1,8 @@
+name: jupyterlab-conda-store
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python>=3.9
+  - nodejs=20
+  - jupyterlab>=4

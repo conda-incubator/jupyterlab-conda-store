@@ -64,46 +64,51 @@ pip uninstall jupyterlab-conda-store
     cd jupyterlab-conda-store
    ```
 
-3. Optional but recommended - Create and activate a development environment with conda:
+3. Create a new conda environment:
 
    ```bash
-   # Create environment named `jupyterlab-conda-store`
-   conda create -n jupyterlab-conda-store
+   conda env create -f environment.yml
+
+   # activate the environment
    conda activate jupyterlab-conda-store
    ```
 
-4. Install JupyterLab and NodeJS **if not installed**:
+4. Install the package in development mode:
 
    ```bash
-   # Install node and jupyterlab from conda-forge
-   conda install -c conda-forge 'nodejs>16' 'jupyterlab>=4'
+   python -m pip install -e .
    ```
 
-5. Install the package in development mode:
+5. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
 
    ```bash
-   pip install -e .
-   ```
-
-6. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
-
-   ```bash
+   # Install the extension dependencies
+   jlpm install
    # Link your development version of the extension with JupyterLab
    jupyter labextension develop . --overwrite
    ```
 
-7. On the first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
+6. On the first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
 
    ```bash
    # Rebuild extension Typescript source after making changes
-   jlpm build
+   jlpm run build
    ```
 
-8. Run JupyterLab and check that the installation worked:
+7. Run JupyterLab and check that the installation worked:
+
+   ```bash
+   # Run JupyterLab
+   jupyter lab
+   ```
+
+> [!TIP]
+> At times you might need to clean your local repo with the command `npm run clean:slate`. This will clean the repository, and re-install and rebuild.
+
+To lint files as you work on contributions, you can run:
 
 ```bash
-# Run JupyterLab
-jupyter lab
+jlpm run lint:check
 ```
 
 ### Uninstalling the development version
