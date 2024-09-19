@@ -144,6 +144,6 @@ jupyterlab-conda-store is developed under the [BSD 3-Clause License](./LICENSE).
 <!-- reusable links -->
 
 [conda-store-docs]: https://conda.store/
-[conda-store-ui-docs]: https://conda-incubator.github.io/conda-store-ui/?path=/story/welcome--page
+[conda-store-ui-docs]: https://conda-incubator.github.io/conda-store-ui/?path=/docs/welcome--docs
 [conda-store-repo]: https://github.com/conda-incubator/conda-store
 [jupyterlab-conda-store-repo]: https://github.com/conda-incubator/jupyterlab-conda-store
