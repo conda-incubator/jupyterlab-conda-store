@@ -67,7 +67,7 @@ pip uninstall jupyterlab-conda-store
 3. Create a new conda environment:
 
    ```bash
-   conda env create -f environment.yml
+   conda env create -f environment.yaml
 
    # activate the environment
    conda activate jupyterlab-conda-store
