@@ -12,7 +12,10 @@ interface IJlabAppProps extends IAppProps {
 class JlabApp extends App<IJlabAppProps> {
   constructor({ settings }: IJlabAppProps) {
     super({
-      pref: settings.composite as IAppProps['pref'],
+      pref: {
+        ...(settings.composite as IAppProps['pref']),
+        routerType: 'memory'
+      },
       settings
     });
 
