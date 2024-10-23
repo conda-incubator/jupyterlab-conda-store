@@ -9,7 +9,6 @@
 | Information | Links                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Project     | [![License](https://img.shields.io/badge/License-BSD%203--Clause-gray.svg?&colorB=298642&style=flat.svg)](https://opensource.org/licenses/BSD-3-Clause) [![conda-store documentation](https://img.shields.io/badge/conda--store-documentation%20📖-gray.svg?&colorB=298642&style=flat.svg)][conda-store-docs] [![conda-store-ui documentation](https://img.shields.io/badge/conda--store--UI-documentation%20📖-gray.svg?&colorB=298642&style=flat.svg)][conda-store-ui-docs] |
-| Workflows   | [![Build extension](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/build.yml/badge.svg)](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/build.yml) [![Make PyPI release](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/release.yml/badge.svg)](https://github.com/conda-incubator/jupyterlab-conda-store/actions/workflows/release.yml)                                               |
 | Releases    | ![GitHub release (the latest by date)](https://img.shields.io/github/v/release/conda-incubator/jupyterlab-conda-store?logo=Github) ![PyPI releases](https://img.shields.io/pypi/v/jupyterlab-conda-store)                                                                                                                                                                                                                                                                     |
 
 ---
@@ -39,6 +38,9 @@ To remove the extension, execute:
 ```bash
 pip uninstall jupyterlab-conda-store
 ```
+
+> [!NOTE]
+> Starting on version `2024.3.1`, this extension is only compatible with JupyterLab `>= 4.0`, use version `2024.1.1` for use with JupyterLab `3.x`.
 
 ## Installing the development version 🚀
 
