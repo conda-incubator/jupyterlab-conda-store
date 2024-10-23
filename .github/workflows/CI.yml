@@ -53,7 +53,7 @@ jobs:
           python -m build
 
       - name: 'Upload extension packages 📤'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: extension-artifacts
           path: dist/
@@ -70,11 +70,11 @@ jobs:
       - name: 'Install Python 🐍'
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.12'
           architecture: 'x64'
 
-      - name: 'Download extension packages 📤'
-        uses: actions/download-artifact@v3
+      - name: 'Download extension packages 📥'
+        uses: actions/download-artifact@v4
         with:
           name: extension-artifacts
 
@@ -102,44 +102,44 @@ jobs:
       - name: 'Checkout repository 🛎'
         uses: actions/checkout@v4
 
-      - name: 'Base Setup'
+      - name: 'Base Setup 🛠'
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
       - name: 'Download extension packages 📤'
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: extension-artifacts
 
-      - name: 'Install the extension'
+      - name: 'Install the extension 📦'
         run: |
           set -eux
           python -m pip install "jupyterlab>4" jupyterlab_conda_store*.whl
 
-      - name: 'Install dependencies'
+      - name: 'Install dependencies 📦'
         working-directory: ui-tests
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
         run: jlpm install
 
-      - name: 'Set up browser cache'
+      - name: 'Set up browser cache 🛠️'
         uses: actions/cache@v4
         with:
           path: |
             ${{ github.workspace }}/pw-browsers
           key: ${{ runner.os }}-${{ hashFiles('ui-tests/yarn.lock') }}
 
-      - name: 'Install browser'
+      - name: 'Install browser 🌐'
         run: jlpm playwright install chromium
         working-directory: ui-tests
 
-      - name: Execute integration tests
+      - name: 'Execute integration tests 🧪'
         working-directory: ui-tests
         run: |
           jlpm playwright test
 
-      - name: Upload Playwright Test report
+      - name: 'Upload Playwright Test report 📤'
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: jupyterlab_conda_store-playwright-tests
           path: |

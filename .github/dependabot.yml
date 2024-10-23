@@ -1,0 +1,12 @@
+---
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "area: CI 👷🏽‍♀️"
+      - "area: dependencies 📦"
+    # ensure we have a nicely formatted commit message
+    prefix: "MAINT - "
