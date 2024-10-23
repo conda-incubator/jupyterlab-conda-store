@@ -1332,6 +1332,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.4.4":
+  version: 7.25.9
+  resolution: "@babel/runtime@npm:7.25.9"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: ce1c87b166ff728eaee91658a67fb7835314ed157b7a36d49602ffdaaa37fb1fcf2784afd00b55fe1672bec53fb38cba622a056c913611af2a44503097216229
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.24.7, @babel/template@npm:^7.3.3":
   version: 7.24.7
   resolution: "@babel/template@npm:7.24.7"
@@ -1649,9 +1658,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@conda-store/conda-store-ui@npm:2024.6.1":
-  version: 2024.6.1
-  resolution: "@conda-store/conda-store-ui@npm:2024.6.1"
+"@conda-store/conda-store-ui@npm:2024.10.1":
+  version: 2024.10.1
+  resolution: "@conda-store/conda-store-ui@npm:2024.10.1"
   dependencies:
     "@codemirror/language": ^6.2.1
     "@codemirror/legacy-modes": ^6.1.0
@@ -1672,6 +1681,7 @@ __metadata:
     date-fns-tz: ^1.3.7
     lodash: ^4.17.21
     match-sorter: ^6.3.1
+    mui-file-dropzone: ^4.0.2
     react: ^18.0.0
     react-beautiful-dnd: ^13.1.0
     react-dom: ^18.0.0
@@ -1681,7 +1691,7 @@ __metadata:
     redux: ^4.2.0
     semver: ^7.3.8
     yaml: ^2.1.1
-  checksum: 08606656d6d921b57164f7ad2aa1c39f42df5448a7e9a3054368d7b23ffd96609c89937c6d4ed8f2428c354764cf52120fc1368f7aa2e372038b0ae4d9659540
+  checksum: ad1d39e1e56bd36e080c2c2c6a2084ee147367bf9fd870161840c773aa0991eae170200fb1b2f9fc93032eb6100e1747ee235b04a0bde2655717bc1b73ab25ad
   languageName: node
   linkType: hard
 
@@ -5209,6 +5219,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"attr-accept@npm:^2.0.0":
+  version: 2.2.4
+  resolution: "attr-accept@npm:2.2.4"
+  checksum: 7b0112e28e3eeb760f4f6bd4ecd8b2467fdb5df7d38d5f8b0a9e83af892023b1f84c594df337b446d5e5eb3f61e18b0470bd9f3aadf39e7853897cbd82cad20d
+  languageName: node
+  linkType: hard
+
 "available-typed-arrays@npm:^1.0.7":
   version: 1.0.7
   resolution: "available-typed-arrays@npm:1.0.7"
@@ -5584,6 +5601,13 @@ __metadata:
     kind-of: ^6.0.2
     shallow-clone: ^3.0.0
   checksum: 770f912fe4e6f21873c8e8fbb1e99134db3b93da32df271d00589ea4a29dbe83a9808a322c93f3bcaf8584b8b4fa6fc269fc8032efbaa6728e0c9886c74467d2
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^1.0.2":
+  version: 1.2.1
+  resolution: "clsx@npm:1.2.1"
+  checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12
   languageName: node
   linkType: hard
 
@@ -6986,6 +7010,15 @@ __metadata:
   dependencies:
     flat-cache: ^3.2.0
   checksum: 283c674fc26bed1c44e74cf25c2640c813e222ea30a2536404b53511ca311d4a2502ee8145a01aecd12b9a910eb4162364776be27a9683e8447332054e9d712f
+  languageName: node
+  linkType: hard
+
+"file-selector@npm:^0.1.12":
+  version: 0.1.19
+  resolution: "file-selector@npm:0.1.19"
+  dependencies:
+    tslib: ^2.0.1
+  checksum: 5b105a3ede9139729ada72d6653ae3f4387a7bf2585e8700f9fa53f22457d1f88304fdde9ad7b43b694a5610d67058302257f448a75248fc2225880bca6df5df
   languageName: node
   linkType: hard
 
@@ -8806,7 +8839,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.0.0
     "@babel/preset-env": ^7.0.0
-    "@conda-store/conda-store-ui": 2024.6.1
+    "@conda-store/conda-store-ui": 2024.10.1
     "@jupyterlab/application": ^4.0.9
     "@jupyterlab/apputils": ^4.1.2
     "@jupyterlab/builder": ^4.0.0
@@ -9400,6 +9433,23 @@ __metadata:
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
   checksum: 673cdb2c3133eb050c745908d8ce632ed2c02d85640e2edb3ace856a2266a813b30c613569bf3354fdf4ea7d1a1494add3bfa95e2713baa27d0c2c71fc44f58f
+  languageName: node
+  linkType: hard
+
+"mui-file-dropzone@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "mui-file-dropzone@npm:4.0.2"
+  dependencies:
+    "@babel/runtime": ^7.4.4
+    clsx: ^1.0.2
+    react-dropzone: ^10.2.1
+  peerDependencies:
+    "@mui/icons-material": ^5.0.0
+    "@mui/material": ^5.0.0
+    prop-types: ^15.7.2
+    react: ">= 17.0"
+    react-dom: ">= 17.0"
+  checksum: 47b1d7c02670651e36a4be9d634692cd2d99d9c44277026b160566fa2410bc81657ff499f1c967cb3625158dc824af006596779cdc39b9c94d8bd83668176bea
   languageName: node
   linkType: hard
 
@@ -10173,6 +10223,19 @@ __metadata:
   peerDependencies:
     react: ^18.3.1
   checksum: 298954ecd8f78288dcaece05e88b570014d8f6dce5db6f66e6ee91448debeb59dcd31561dddb354eee47e6c1bb234669459060deb238ed0213497146e555a0b9
+  languageName: node
+  linkType: hard
+
+"react-dropzone@npm:^10.2.1":
+  version: 10.2.2
+  resolution: "react-dropzone@npm:10.2.2"
+  dependencies:
+    attr-accept: ^2.0.0
+    file-selector: ^0.1.12
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ">= 16.8"
+  checksum: af08b78db753dd9c277c64364c153d6cb6d563df3cc4db1731458edcc203cfa41ed3d032c5249822e5eb4d2534232e514d663a025962d08f0e6ea65550411116
   languageName: node
   linkType: hard
 
@@ -11647,6 +11710,13 @@ __metadata:
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.0.1":
+  version: 2.8.0
+  resolution: "tslib@npm:2.8.0"
+  checksum: de852ecd81adfdb4870927e250763345f07dc13fe7f395ce261424966bb122a0992ad844c3ec875c9e63e72afe2220a150712984e44dfd1a8a7e538a064e3d46
   languageName: node
   linkType: hard
 
