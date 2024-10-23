@@ -4,14 +4,15 @@
 
 ## What's Changed
 
-* Remove unused and outdated update screenshots workflow by @krassowski in https://github.com/conda-incubator/jupyterlab-conda-store/pull/57
-* Update README.md by @gabalafou in https://github.com/conda-incubator/jupyterlab-conda-store/pull/61
-* Fix broken links by @krassowski in https://github.com/conda-incubator/jupyterlab-conda-store/pull/62
-* conda-store-ui 2024.10.1 + memory router by @gabalafou in https://github.com/conda-incubator/jupyterlab-conda-store/pull/63
-* MAINT - Bump GH actions by @trallard in https://github.com/conda-incubator/jupyterlab-conda-store/pull/66
+- Remove unused and outdated update screenshots workflow by @krassowski in https://github.com/conda-incubator/jupyterlab-conda-store/pull/57
+- Update README.md by @gabalafou in https://github.com/conda-incubator/jupyterlab-conda-store/pull/61
+- Fix broken links by @krassowski in https://github.com/conda-incubator/jupyterlab-conda-store/pull/62
+- conda-store-ui 2024.10.1 + memory router by @gabalafou in https://github.com/conda-incubator/jupyterlab-conda-store/pull/63
+- MAINT - Bump GH actions by @trallard in https://github.com/conda-incubator/jupyterlab-conda-store/pull/66
 
 ## New Contributors
-* @gabalafou made their first contribution in https://github.com/conda-incubator/jupyterlab-conda-store/pull/61
+
+- @gabalafou made their first contribution in https://github.com/conda-incubator/jupyterlab-conda-store/pull/61
 
 **Full Changelog**: https://github.com/conda-incubator/jupyterlab-conda-store/compare/2024.6.1...2010.10.1
 
