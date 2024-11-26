@@ -21,7 +21,7 @@ All the Python packaging instructions in the `pyproject.toml` file to wrap your 
 3. Optional - if there is a newer release of `conda-store-ui`, update the `conda-store-ui` dependency in the `package.json` file.
 
    ```bash
-   yarn upgrade @conda-store/conda-store-ui@<version>
+   jlpm up @conda-store/conda-store-ui@<version>
    ```
 
 4. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
