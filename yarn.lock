@@ -1658,9 +1658,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@conda-store/conda-store-ui@npm:2024.10.1":
-  version: 2024.10.1
-  resolution: "@conda-store/conda-store-ui@npm:2024.10.1"
+"@conda-store/conda-store-ui@npm:2024.11.1":
+  version: 2024.11.1
+  resolution: "@conda-store/conda-store-ui@npm:2024.11.1"
   dependencies:
     "@codemirror/language": ^6.2.1
     "@codemirror/legacy-modes": ^6.1.0
@@ -1691,7 +1691,7 @@ __metadata:
     redux: ^4.2.0
     semver: ^7.3.8
     yaml: ^2.1.1
-  checksum: ad1d39e1e56bd36e080c2c2c6a2084ee147367bf9fd870161840c773aa0991eae170200fb1b2f9fc93032eb6100e1747ee235b04a0bde2655717bc1b73ab25ad
+  checksum: c75da5b9495f7d3ba6385add917e567820610979b5ab3c06d56f14603e19b0199ed8a1bb69b5ced682f726c7fec551ede4b9993380ba2043a3045b4051b1be57
   languageName: node
   linkType: hard
 
@@ -8839,7 +8839,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.0.0
     "@babel/preset-env": ^7.0.0
-    "@conda-store/conda-store-ui": 2024.10.1
+    "@conda-store/conda-store-ui": 2024.11.1
     "@jupyterlab/application": ^4.0.9
     "@jupyterlab/apputils": ^4.1.2
     "@jupyterlab/builder": ^4.0.0
