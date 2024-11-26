@@ -28,7 +28,7 @@ Release captain responsible - <@gh_username>
 - [ ] [Optional] Update the `conda-store-ui` version used in the extension:
 
   ```bash
-  yarn upgrade @conda-store/conda-store-ui@<version>
+  jlpm up @conda-store/conda-store-ui@<version>
   ```
 
 - [ ] Update the [CHANGELOG.md](./CHANGELOG.md) file with the new version, release date, and relevant changes [^github-activity].
