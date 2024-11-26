@@ -1,5 +1,17 @@
 # Changelog
 
+## 2024.11.1
+
+## What's Changed
+
+- Bump conda-store-ui version by @soapy1 in https://github.com/conda-incubator/jupyterlab-conda-store/pull/71
+
+## New Contributors
+
+- @soapy1 made their first contribution in https://github.com/conda-incubator/jupyterlab-conda-store/pull/71
+
+**Full Changelog**: https://github.com/conda-incubator/jupyterlab-conda-store/compare/2024.10.1...2010.11.1
+
 ## 2024.10.1
 
 ## What's Changed
